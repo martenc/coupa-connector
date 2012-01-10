@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Mule Coupa Cloud Connector
+
+    Copyright (c) MuleSoft, Inc.  All rights reserved.  http://www.mulesoft.com
+
+    The software in this package is published under the terms of the CPAL v1.0
+    license, a copy of which has been included with this distribution in the
+    LICENSE.txt file.
+
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="coupa-cxml-invoice-xml.xsd"/>
+    <!-- base class -->
+  <xs:complexType name='transaction'/>
+  <!--  cxml schema -->
+  <xs:element name="cXML">
+    <xs:complexType>
+       <xs:complexContent>
+        <xs:extension base="transaction"> 
+          <xs:sequence>
+            <xs:element ref="Header"/>
+            <xs:element ref="Request"/>
+          </xs:sequence>
+          <xs:attribute name="payloadID" use="required"/>
+          <xs:attribute name="timestamp" use="required" type="xs:NMTOKEN"/>
+          <xs:attribute name="version" use="required" type="xs:string"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Header">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="From"/>
+        <xs:element ref="To"/>
+        <xs:element ref="Sender"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="From" type="CredentialType"/>
+  <xs:element name="To" type="CredentialType"/>
+  <xs:element name="Sender">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="CredentialType">
+          <xs:sequence>
+            <xs:element ref="UserAgent"/>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserAgent" type="xs:string"/>
+  <xs:element name="Request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="InvoiceDetailRequest"/>
+      </xs:sequence>
+      <xs:attribute name="deploymentMode" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvoiceDetailRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="InvoiceDetailRequestHeader"/>
+        <xs:element ref="InvoiceDetailOrder" maxOccurs="unbounded"/>
+        <xs:element ref="InvoiceDetailSummary"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvoiceDetailRequestHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="InvoiceDetailHeaderIndicator"/>
+        <xs:element ref="InvoiceDetailLineIndicator"/>
+        <xs:element ref="PaymentTerm"/>
+        <xs:element ref="Extrinsic"/>
+      </xs:sequence>
+      <xs:attribute name="invoiceDate" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="invoiceID" use="required" type="xs:string"/>
+      <xs:attribute name="operation" use="required" type="xs:NCName"/>
+      <xs:attribute name="purpose" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvoiceDetailHeaderIndicator">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="InvoiceDetailLineIndicator">
+    <xs:complexType>
+      <xs:attribute name="isTaxInLine" use="optional" type="xs:NCName"/>
+      <xs:attribute name="isAccountingInLine" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PaymentTerm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Discount"/>
+      </xs:sequence>
+      <xs:attribute name="payInNumberOfDays" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Extrinsic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IdReference" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdReference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Description"/>
+      </xs:sequence>
+      <xs:attribute name="identifier" use="required" type="xs:string"/>
+      <xs:attribute name="domain" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Discount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DiscountPercent"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DiscountPercent">
+    <xs:complexType>
+      <xs:attribute name="percent" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvoiceDetailOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="InvoiceDetailOrderInfo"/>
+        <xs:element ref="InvoiceDetailItem" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="InvoiceDetailServiceItem" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvoiceDetailOrderInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="OrderReference" minOccurs="0"/>
+        <xs:element ref="MasterAgreementIDInfo" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OrderReference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DocumentReference"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocumentReference">
+    <xs:complexType>
+      <xs:attribute name="payloadID" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MasterAgreementIDInfo">
+    <xs:complexType>
+      <xs:attribute name="agreementID" type="xs:NMTOKEN"/>
+      <xs:attribute name="agreementDate" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvoiceDetailItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UnitOfMeasure"/>
+        <xs:element ref="UnitPrice"/>
+        <xs:element ref="InvoiceDetailItemReference"/>
+        <xs:element ref="SubtotalAmount"/>
+        <xs:element ref="Tax"/>
+        <xs:element ref="Distribution"/>
+      </xs:sequence>
+      <xs:attribute name="invoiceLineNumber" use="required" type="xs:integer"/>
+      <xs:attribute name="quantity" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnitOfMeasure" type="xs:NCName"/>
+  <xs:element name="UnitPrice" type="MoneyType"/>
+  <xs:element name="InvoiceDetailItemReference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Description"/>
+      </xs:sequence>
+      <xs:attribute name="lineNumber" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvoiceDetailServiceItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="InvoiceDetailServiceItemReference"/>
+        <xs:element ref="SubtotalAmount"/>
+        <xs:element ref="Tax"/>
+        <xs:element ref="Distribution"/>
+      </xs:sequence>
+      <xs:attribute name="invoiceLineNumber" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvoiceDetailServiceItemReference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Description"/>
+      </xs:sequence>
+      <xs:attribute name="lineNumber" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvoiceDetailSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="SubtotalAmount"/>
+        <xs:element ref="Tax"/>
+        <xs:element ref="SpecialHandlingAmount"/>
+        <xs:element ref="ShippingAmount"/>
+        <xs:element ref="InvoiceDetailDiscount"/>
+        <xs:element ref="NetAmount"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpecialHandlingAmount" type="MoneyType"/>
+  <xs:element name="ShippingAmount" type="MoneyType"/>
+  <xs:element name="NetAmount" type="MoneyType"/>
+  <xs:element name="InvoiceDetailDiscount" type="MoneyType"/>
+  <xs:complexType name="CredentialType">
+    <xs:sequence>
+      <xs:element ref="Credential"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Credential">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Identity"/>
+        <xs:element minOccurs="0" ref="SharedSecret"/>
+      </xs:sequence>
+      <xs:attribute name="domain" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Identity" type="xs:NCName"/>
+  <xs:element name="SharedSecret" type="xs:NCName"/>
+  <xs:complexType name="MoneyType">
+    <xs:sequence>
+      <xs:element ref="Money"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Money">
+    <xs:complexType mixed="true">
+      <xs:attribute name="currency" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Name">
+    <xs:complexType mixed="true">
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Description">
+    <xs:complexType mixed="true">
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubtotalAmount" type="MoneyType"/>
+  <xs:element name="Distribution">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Accounting"/>
+        <xs:element name="Charge" type="MoneyType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Accounting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="AccountingSegment" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AccountingSegment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Name"/>
+        <xs:element ref="Description"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tax">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="MoneyType">
+          <xs:sequence>
+            <xs:element ref="Description"/>
+            <xs:element ref="TaxDetail"/>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TaxDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="TaxableAmount"/>
+        <xs:element ref="TaxAmount"/>
+        <xs:element ref="TaxLocation"/>
+      </xs:sequence>
+      <xs:attribute name="category" use="required" type="xs:NCName"/>
+      <xs:attribute name="percentageRate" use="required" type="xs:decimal"/>
+      <xs:attribute name="purpose" use="required" type="xs:NCName"/>
+      <xs:attribute name="taxPointDate" use="required" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TaxableAmount" type="MoneyType"/>
+  <xs:element name="TaxAmount" type="MoneyType"/>
+  <xs:element name="TaxLocation">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:NCName">
+            <xs:attribute ref="xml:lang" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
