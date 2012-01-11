@@ -1,7 +1,7 @@
 /**
  * Mule Coupa Cloud Connector
  *
- * Copyright (c) MuleSoft, Inc.  All rights reserved.  http://www.mulesoft.com
+ * Copyright (c) MuleSoft, Inc. All rights reserved. http://www.mulesoft.com
  *
  * The software in this package is published under the terms of the CPAL v1.0
  * license, a copy of which has been included with this distribution in the
@@ -14,10 +14,38 @@
 
 package org.mule.modules.coupa;
 
+import java.util.Map;
+
 import org.mule.api.annotations.Module;
+import org.mule.api.annotations.Processor;
+import org.mule.modules.utils.mom.CxfMapObjectMappers;
+
+import ar.com.zauber.commons.mom.MapObjectMapper;
+
+import com.coupa.api.Repository;
+import com.coupa.api.impl.DefaultRepository;
+import com.coupa.api.impl.JerseyClient;
+import com.coupa.resources.Resource;
 
 @Module(name = "coupa", schemaVersion = "1.0")
-public class CoupaModule
-{
+public class CoupaModule {
 
+    private JerseyClient coupaServer;
+
+    private MapObjectMapper mom = CxfMapObjectMappers.defaultWithPackage("com.coupa.resources").build();
+
+    @Processor
+    public Object save(ResourceType type, Map<String, Object> resource) {
+        return repo(type).save((Resource) mom.unmap(resource, type.getResourceClass()));
+    }
+
+    @Processor
+    public Object find(ResourceType type, Map<String, String> conditions, boolean exactMatch, int offset,
+            Integer limit) {
+        return repo(type).findAll(conditions, exactMatch, offset, limit);
+    }
+
+    protected Repository<Resource> repo(ResourceType type) {
+        return DefaultRepository.newRepository(coupaServer, type.getResourceClass());
+    }
 }
