@@ -15,6 +15,8 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
         http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/3.2/mule.xsd
         http://www.mulesoft.org/schema/mule/coupa http://www.mulesoft.org/schema/mule/coupa/1.0/mule-coupa.xsd">
+        
+ <coupa:config baseUrl="http://localhost:8080"  apiKey="" />
 
   <flow name="Save">
     <coupa:save type="Account">
@@ -22,20 +24,20 @@
         <code>ASXS44</code>
         <name>MyAccount</name>
       </coupa:resource>
-      <coupa:save />
+    </coupa:save>
   </flow>
 
   <flow name="FindByExample">
     <coupa:find-by-example type="Account">
-      <coupa:protoype>
+      <coupa:prototype>
         <code>ASXS44</code>
         <active>false</active>
-      </coupa:protoype>
+      </coupa:prototype>
     </coupa:find-by-example>
   </flow>
 
   <flow name="Find">
-    <coupa:find type="Account" limit="500"/>
+    <coupa:find type="Account" limit="500" />
   </flow>
 
 </mule>

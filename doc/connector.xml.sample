@@ -5,7 +5,7 @@
 		<name>MyAccount</name>
 		...etc..
 	</coupa:resource>
-<coupa:save/>
+</coupa:save>
 <!-- END_INCLUDE(coupa:save) -->
 
 <!-- BEGIN_INCLUDE(coupa:find) -->
@@ -14,9 +14,9 @@
 
 <!-- BEGIN_INCLUDE(coupa:find-by-example) -->
 <coupa:find-by-example type="Account">
-  <coupa:protoype>
+  <coupa:prototype>
     <code>ASXS44</code>
 	<active>false</active>
-  </coupa:protoype>
+  </coupa:prototype>
 </coupa:find-by-example>
 <!-- END_INCLUDE(coupa:find-by-example) -->

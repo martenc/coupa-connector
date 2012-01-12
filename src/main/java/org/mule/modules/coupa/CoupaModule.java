@@ -153,4 +153,14 @@ public class CoupaModule
     {
         this.coupaClient = coupaClient;
     }
+
+    public void setApiKey(String apiKey)
+    {
+        this.apiKey = apiKey;
+    }
+
+    public void setBaseUrl(String baseUrl)
+    {
+        this.baseUrl = baseUrl;
+    }
 }
