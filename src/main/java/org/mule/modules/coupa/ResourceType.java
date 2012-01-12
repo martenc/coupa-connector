@@ -8,7 +8,6 @@
  * LICENSE.txt file.
  */
 
-
 package org.mule.modules.coupa;
 
 import com.coupa.resources.Account;
@@ -30,6 +29,7 @@ import com.coupa.resources.Supplier;
 import com.coupa.resources.User;
 
 /**
+ * Coupa's {@link Resource}s classes enumeration
  *
  * @author flbulgarelli
  */

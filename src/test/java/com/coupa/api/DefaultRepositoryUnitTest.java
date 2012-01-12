@@ -21,35 +21,40 @@ import com.coupa.resources.Resources;
 import com.coupa.resources.User;
 import com.sun.jersey.api.representation.Form;
 
-public class DefaultRepositoryUnitTest {
+public class DefaultRepositoryUnitTest
+{
 
     private JerseyClient mockCoupa;
     private Repository<User> users;
     private Repository<Currency> currencies;
 
     @Before
-    public void setup() {
+    public void setup()
+    {
         mockCoupa = mock(JerseyClient.class);
         users = DefaultRepository.newRepository(mockCoupa, User.class);
         currencies = DefaultRepository.newRepository(mockCoupa, Currency.class);
     }
 
     @Test
-    public void testShouldReturnResourceWhenResponseIsNotEmpty() throws Exception {
+    public void testShouldReturnResourceWhenResponseIsNotEmpty() throws Exception
+    {
         when(mockCoupa.get("/users/1", User.class)).thenReturn(newUser(1));
         User user = users.findById(1);
         assertNotNull(user);
         assertEquals(i(1), user.getId());
     }
 
-    protected User newUser(final int id) {
+    protected User newUser(final int id)
+    {
         User user = new User();
         user.setId(i(id));
         return user;
     }
 
     @Test
-    public void testPluralization() throws Exception {
+    public void testPluralization() throws Exception
+    {
         when(mockCoupa.get("/users/1", User.class)).thenReturn(newUser(1));
         User user = users.findById(1);
         assertNotNull(user);
@@ -57,7 +62,8 @@ public class DefaultRepositoryUnitTest {
     }
 
     @Test
-    public void testAssociated() throws Exception {
+    public void testAssociated() throws Exception
+    {
         when(mockCoupa.get("/users/1", User.class)).thenReturn(newUser(1));
         User user = users.findById(1);
 
@@ -66,11 +72,16 @@ public class DefaultRepositoryUnitTest {
     }
 
     @Test
-    public void testMultiple() throws Exception {
+    public void testMultiple() throws Exception
+    {
         Form props = new Form();
         props.add("offset", "0");
-        when(mockCoupa.get("/users", props, Resources.class)).thenReturn(
-                new Resources() {{ resources = Arrays.<Resource>asList(newUser(1), newUser(2)); }});
+        when(mockCoupa.get("/users", props, Resources.class)).thenReturn(new Resources()
+        {
+            {
+                resources = Arrays.<Resource> asList(newUser(1), newUser(2));
+            }
+        });
         List<User> allUsers = users.findAll();
 
         assertNotNull(allUsers);
@@ -79,7 +90,8 @@ public class DefaultRepositoryUnitTest {
     }
 
     @Test
-    public void testUpdate() throws Exception {
+    public void testUpdate() throws Exception
+    {
         when(mockCoupa.get("/currencies/1", Currency.class)).thenReturn(newCurrency());
 
         when(mockCoupa.put(eq("/currencies/1"), any(), eq(Currency.class))).thenReturn(newCurrency());
@@ -92,18 +104,21 @@ public class DefaultRepositoryUnitTest {
         assertEquals("USD", newCurrency.getCode());
     }
 
-    protected Currency newCurrency() {
+    protected Currency newCurrency()
+    {
         Currency currency = new Currency();
         currency.setId(i(1));
         currency.setCode("USD");
         return currency;
     }
 
-    @Test(expected=RESTException.class)
-    public void testErrors() throws Exception {
+    @Test(expected = RESTException.class)
+    public void testErrors() throws Exception
+    {
         when(mockCoupa.get("/currencies/1", Currency.class)).thenReturn(newCurrency());
 
-        when(mockCoupa.put(eq("/currencies/1"), any(), eq(Currency.class))).thenThrow(new RESTException("Code cannot be blank"));
+        when(mockCoupa.put(eq("/currencies/1"), any(), eq(Currency.class))).thenThrow(
+            new RESTException("Code cannot be blank"));
 
         Currency currency = currencies.findById(1);
         currency.setCode("");
@@ -112,7 +127,8 @@ public class DefaultRepositoryUnitTest {
     }
 
     @Test
-    public void testCreate() throws Exception {
+    public void testCreate() throws Exception
+    {
         when(mockCoupa.get("/currencies/1", Currency.class)).thenReturn(newCurrency());
         when(mockCoupa.post(eq("/currencies"), any(), eq(Currency.class))).thenReturn(newCurrency());
 
@@ -125,7 +141,8 @@ public class DefaultRepositoryUnitTest {
     }
 
     @Test
-    public void testFindByExample() throws Exception {
+    public void testFindByExample() throws Exception
+    {
         Form props = new Form();
         props.add("offset", "0");
         props.add("code", "USD");

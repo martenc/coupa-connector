@@ -1,9 +1,9 @@
+
 package com.coupa.api;
 
 import java.math.BigInteger;
 
-public interface Identifiable {
-
+public interface Identifiable
+{
     BigInteger getId();
-
 }

@@ -1,3 +1,4 @@
+
 package com.coupa.api;
 
 import static org.junit.Assert.assertEquals;
@@ -18,22 +19,26 @@ import com.coupa.api.impl.DefaultRepository;
 import com.coupa.api.impl.JerseyClient;
 import com.coupa.resources.User;
 
-public class CoupaTestDriver {
+public class CoupaTestDriver
+{
     private Repository<User> userRepo;
 
     @Before
-    public void setup() {
+    public void setup()
+    {
         JerseyClient client = new JerseyClient(System.getenv("coupaHost"), System.getenv("coupaKey"));
         userRepo = DefaultRepository.newRepository(client, User.class);
     }
 
     @Test(expected = RESTException.class)
-    public void testSaveNewUserFails() throws Exception {
+    public void testSaveNewUserFails() throws Exception
+    {
         userRepo.save(new User());
     }
 
     @Test
-    public void testSaveNewUser() throws Exception {
+    public void testSaveNewUser() throws Exception
+    {
         int i = new Random().nextInt();
         User resource = new User();
         resource.setEmail("john" + i + "@doe.com");
@@ -45,13 +50,15 @@ public class CoupaTestDriver {
     }
 
     @Test
-    public void testFindById() throws Exception {
+    public void testFindById() throws Exception
+    {
         User user = userRepo.findById(2);
         assertNotNull(user);
     }
 
     @Test
-    public void testFindAll() throws Exception {
+    public void testFindAll() throws Exception
+    {
         List<User> users = userRepo.findAll();
         Streams.from(users).print();
         assertNotNull(users);
@@ -59,7 +66,8 @@ public class CoupaTestDriver {
     }
 
     @Test
-    public void testFindAllWithLimit() throws Exception {
+    public void testFindAllWithLimit() throws Exception
+    {
         List<User> users = userRepo.findAll(0, 10);
         assertNotNull(users);
         assertEquals(10, users.size());

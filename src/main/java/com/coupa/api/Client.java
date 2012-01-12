@@ -1,9 +1,15 @@
+
 package com.coupa.api;
 
 import javax.ws.rs.core.MultivaluedMap;
 
-public interface Client {
-
+/**
+ * Client interface to connect to Coupa in a REST style
+ *
+ * @author flbulgarelli
+ */
+public interface Client
+{
     <T> T get(String uri, Class<T> clazz);
 
     <T> T get(String uri, MultivaluedMap<String, String> urlParams, Class<T> clazz);
