@@ -18,7 +18,7 @@ import com.coupa.api.impl.DefaultRepository;
 import com.coupa.api.impl.JerseyClient;
 import com.coupa.resources.User;
 
-public class CoupaIntegrationTest {
+public class CoupaTestDriver {
     private Repository<User> userRepo;
 
     @Before
