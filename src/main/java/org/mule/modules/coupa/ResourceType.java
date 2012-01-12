@@ -1,3 +1,4 @@
+
 package org.mule.modules.coupa;
 
 import com.coupa.resources.Account;
@@ -18,7 +19,12 @@ import com.coupa.resources.ShippingTerm;
 import com.coupa.resources.Supplier;
 import com.coupa.resources.User;
 
-public enum ResourceType {
+/**
+ *
+ * @author flbulgarelli
+ */
+public enum ResourceType
+{
 
     Account(Account.class), //
     Address(Address.class), //
@@ -37,13 +43,17 @@ public enum ResourceType {
     Supplier(Supplier.class), //
     User(User.class);
 
-    private ResourceType(Class<? extends Resource> clazz) {
-        // TODO Auto-generated constructor stub
+    private Class<? extends Resource> resourceClass;
+
+    private ResourceType(Class<? extends Resource> clazz)
+    {
+        this.resourceClass = clazz;
     }
 
-    public Class<Resource> getResourceClass() {
-        // TODO Auto-generated method stub
-        return null;
+    @SuppressWarnings("unchecked")
+    public Class<Resource> getResourceClass()
+    {
+        return (Class<Resource>) resourceClass;
     }
 
 }
