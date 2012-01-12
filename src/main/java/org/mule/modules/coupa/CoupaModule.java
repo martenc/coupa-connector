@@ -72,7 +72,7 @@ public class CoupaModule
     @PostConstruct
     public void init()
     {
-        if (coupaClient != null)
+        if (coupaClient == null)
         {
             coupaClient = new JerseyClient(baseUrl, apiKey);
         }
@@ -83,19 +83,23 @@ public class CoupaModule
      * creates it. Otherwise, it updates the present fields, leaving the rest of
      * fields unchanged.
      *
+     * {@sample.xml ../../../doc/connector.xml.sample coupa:save}
+     *
      * @param type the type of the resource to update
      * @param resource the resource
      * @return the updated or created object
      * @throws RESTException if the object can not be created
      */
     @Processor
-    public Object save(ResourceType type, Map<String, Object> resource)
+    public Resource save(ResourceType type, Map<String, Object> resource)
     {
         return repo(type).save(unmap(type, resource));
     }
 
     /**
      * Searches for resources
+     *
+     * {@sample.xml ../../../doc/connector.xml.sample coupa:find}
      *
      * @param type the type of resource to search
      * @param conditions TODO
@@ -106,7 +110,7 @@ public class CoupaModule
      */
     @Processor
     public Iterable<Resource> find(ResourceType type,
-                                   Map<String, String> conditions,
+                                   @Optional Map<String, String> conditions,
                                    @Optional @Default("false") boolean exactMatch,
                                    @Optional @Default("0") int offset,
                                    @Optional Integer limit)
@@ -116,6 +120,8 @@ public class CoupaModule
 
     /**
      * Searches for resources using an example
+     *
+     * {@sample.xml ../../../doc/connector.xml.sample coupa:find-by-example}
      *
      * @param type the type of object to search
      * @param prototype the example. Fields set will be used as search conditions

@@ -1,0 +1,22 @@
+<!-- BEGIN_INCLUDE(coupa:save) -->
+<coupa:save type="Account">
+	<coupa:resource>
+		<code>ASXS44</code>
+		<name>MyAccount</name>
+		...etc..
+	</coupa:resource>
+<coupa:save/>
+<!-- END_INCLUDE(coupa:save) -->
+
+<!-- BEGIN_INCLUDE(coupa:find) -->
+<coupa:find type="Account" limit="500"/>
+<!-- END_INCLUDE(coupa:find) -->
+
+<!-- BEGIN_INCLUDE(coupa:find-by-example) -->
+<coupa:find-by-example type="Account">
+  <coupa:protoype>
+    <code>ASXS44</code>
+	<active>false</active>
+  </coupa:protoype>
+</coupa:find-by-example>
+<!-- END_INCLUDE(coupa:find-by-example) -->
