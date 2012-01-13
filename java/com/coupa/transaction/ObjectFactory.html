@@ -1,0 +1,4182 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="description" content="Documentation for Mule Coupa Connector." />
+
+<link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" />
+<title>
+
+  ObjectFactory
+
+
+| Mule Coupa Connector
+
+</title>
+<link href="../../../../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../assets/mule-developer-prettify.css" rel="stylesheet" type="text/css" />
+<link href="../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+<script src="../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../../../../assets/mule-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../assets/prettify.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("../../../../", "../../../../assets/");
+</script>
+<script src="../../../../assets/mule-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../../../../assets/customizations.js" type="text/javascript"></script>
+<noscript>
+  <style type="text/css">
+    html,body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="">
+
+<div id="header">
+    <div id="headerLeft">
+    
+      <span id="masthead-title">Mule Coupa Connector</span>
+    
+    <ul id="header-tabs" class="">
+    
+    	<li id="guide"><a href="../../../../guide/install.html">
+	    	<span class="en">Install Guide</span>
+    	</a></li>
+    
+    	<li id="java"><a href="../../../../java/packages.html">
+	    	<span class="en">Java API Reference</span>
+    	</a></li>
+    
+    	<li id="mule"><a href="../../../../mule/modules.html">
+	    	<span class="en">Mule API Reference</span>
+    	</a></li>
+    
+    </ul>
+    </div>
+    <div id="headerRight">
+      <a href="http://www.mulesoft.com" tabindex="-1">
+      <img src="../../../../assets//images/mulesoft-logo-final.gif" alt="MuleSoft" border="0" id="mulesoftlogo"></a><br/>
+      
+  <div id="search" >
+      <div id="searchForm">
+          <form accept-charset="utf-8" class="gsc-search-box" 
+                onsubmit="return submit_search()">
+            <table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody>
+                <tr>
+                  <td class="gsc-input">
+                    <input id="search_autocomplete" class="gsc-input" type="text" size="33" autocomplete="off"
+                      title="search developer docs" name="q"
+                      value="search developer docs"
+                      onFocus="search_focus_changed(this, true)"
+                      onBlur="search_focus_changed(this, false)"
+                      onkeydown="return search_changed(event, true, '../../../../')"
+                      onkeyup="return search_changed(event, false, '../../../../')" />
+                  <div id="search_filtered_div" class="no-display">
+                      <table id="search_filtered" cellspacing=0>
+                      </table>
+                  </div>
+                  </td>
+                  <td class="gsc-search-button">
+                    <input type="submit" value="Search" title="search" id="search-button" class="gsc-search-button" />
+                  </td>
+                  <td class="gsc-clear-button">
+                    <div title="clear results" class="gsc-clear-button">&nbsp;</div>
+                  </td>
+                </tr></tbody>
+              </table>
+          </form>
+      </div><!-- searchForm -->
+  </div><!-- search -->
+      
+    </div>
+</div><!-- header -->
+
+
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="swapper">
+        <div id="nav-panels">
+          <div id="resize-packages-nav">
+            <div id="packages-nav">
+              <div id="index-links">
+                <a href="../../../../java/packages.html"  >Package Index</a> |
+                <a href="../../../../java/classes.html" >Class Index</a>
+              </div>
+              <ul>
+                
+    <li class="api apilevel-">
+  <a href="../../../../java/com/coupa/api/package-summary.html">com.coupa.api</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../java/com/coupa/api/impl/package-summary.html">com.coupa.api.impl</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../java/com/coupa/api/impl/internal/package-summary.html">com.coupa.api.impl.internal</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../java/com/coupa/resources/package-summary.html">com.coupa.resources</a></li>
+    <li class="selected api apilevel-">
+  <a href="../../../../java/com/coupa/transaction/package-summary.html">com.coupa.transaction</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../java/org/mule/modules/coupa/package-summary.html">org.mule.modules.coupa</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../java/org/mule/modules/coupa/config/package-summary.html">org.mule.modules.coupa.config</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../java/org/mule/modules/coupa/config/spring/package-summary.html">org.mule.modules.coupa.config.spring</a></li>
+              </ul><br/>
+            </div> <!-- end packages -->
+          </div> <!-- end resize-packages -->
+          <div id="classes-nav">
+            <ul>
+              
+              
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Accounting.html">Accounting</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/AccountingSegment.html">AccountingSegment</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Credential.html">Credential</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/CXML.html">CXML</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Description.html">Description</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Discount.html">Discount</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/DiscountPercent.html">DiscountPercent</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Distribution.html">Distribution</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/DocumentReference.html">DocumentReference</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Extrinsic.html">Extrinsic</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Header.html">Header</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/IdReference.html">IdReference</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailHeaderIndicator.html">InvoiceDetailHeaderIndicator</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailItem.html">InvoiceDetailItem</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailItemReference.html">InvoiceDetailItemReference</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailLineIndicator.html">InvoiceDetailLineIndicator</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailOrder.html">InvoiceDetailOrder</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailOrderInfo.html">InvoiceDetailOrderInfo</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailRequest.html">InvoiceDetailRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailRequestHeader.html">InvoiceDetailRequestHeader</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailServiceItem.html">InvoiceDetailServiceItem</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailServiceItemReference.html">InvoiceDetailServiceItemReference</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailSummary.html">InvoiceDetailSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/MasterAgreementIDInfo.html">MasterAgreementIDInfo</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Money.html">Money</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Name.html">Name</a></li>
+          <li class="selected api apilevel-"><a href="../../../../java/com/coupa/transaction/ObjectFactory.html">ObjectFactory</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/OrderReference.html">OrderReference</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/PaymentTerm.html">PaymentTerm</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Request.html">Request</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Sender.html">Sender</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Tax.html">Tax</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/TaxDetail.html">TaxDetail</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/TaxLocation.html">TaxLocation</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Transaction.html">Transaction</a></li>
+      </ul>
+    </li>
+              
+              
+              
+              
+            </ul><br/>
+          </div><!-- end classes -->
+        </div><!-- end nav-panels -->
+        <div id="nav-tree" style="display:none">
+          <div id="index-links">
+            <a href="../../../../packages.html"  >Package Index</a> | 
+            <a href="../../../../classes.html" >Class Index</a>
+          </div>
+        </div><!-- end nav-tree -->
+      </div><!-- end swapper -->
+    </div> <!-- end side-nav -->
+    <script>
+      if (!isMobile) {
+        $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav");
+        chooseDefaultNav();
+        if ($("#nav-tree").is(':visible')) {
+          init_default_navtree("../../../../");
+        } else {
+          addLoadEvent(function() {
+            scrollIntoView("packages-nav");
+            scrollIntoView("classes-nav");
+          });
+        }
+        $("#swapper").css({borderBottom:"2px solid #aaa"});
+      } else {
+        swapNav(); // tree view should be used on mobile
+      }
+    </script>
+
+
+
+<div class="g-unit" id="doc-content">
+
+<div id="api-info-block">
+
+
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+
+Summary:
+
+
+
+
+
+
+
+  <a href="#lfields">Fields</a>
+  
+
+
+
+  &#124; <a href="#pubctors">Ctors</a>
+  
+
+
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+<div class="api-level">
+  
+
+
+  
+  
+
+</div>
+</div><!-- end api-info-block -->
+
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<div id="jd-header">
+    public
+     
+     
+    
+    class
+<h1>ObjectFactory</h1>
+
+
+
+  
+    extends Object<br/>
+  
+  
+  
+
+  
+  
+  
+
+
+</div><!-- end header -->
+
+<div id="naMessage"></div>
+
+<div id="jd-content" class="api apilevel-">
+<table class="jd-inheritance-table">
+
+
+    <tr>
+        
+        <td colspan="2" class="jd-inheritance-class-cell">java.lang.Object</td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+        
+        <td colspan="1" class="jd-inheritance-class-cell">com.coupa.transaction.ObjectFactory</td>
+    </tr>
+    
+
+</table>
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Class Overview</h2>
+<p>This object contains factory methods for each 
+ Java content interface and Java element interface 
+ generated in the com.coupa.transaction package. 
+ <p>An ObjectFactory allows you to programatically 
+ construct new instances of the Java representation 
+ for XML content. The Java representation of XML 
+ content can consist of schema derived interfaces 
+ and classes representing the binding of schema 
+ type definitions, element declarations and model 
+ groups.  Factory methods for each of these are 
+ provided in this class.
+ 
+</p>
+
+
+
+
+
+</div><!-- jd-descr -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Summary</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========== FIELD SUMMARY =========== -->
+<table id="lfields" class="jd-sumtable"><tr><th colspan="12">Fields</th></tr>
+
+
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/ObjectFactory.html#_From_QNAME">_From_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/ObjectFactory.html#_Identity_QNAME">_Identity_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/ObjectFactory.html#_InvoiceDetailDiscount_QNAME">_InvoiceDetailDiscount_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/ObjectFactory.html#_NetAmount_QNAME">_NetAmount_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/ObjectFactory.html#_SharedSecret_QNAME">_SharedSecret_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/ObjectFactory.html#_ShippingAmount_QNAME">_ShippingAmount_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/ObjectFactory.html#_SpecialHandlingAmount_QNAME">_SpecialHandlingAmount_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/ObjectFactory.html#_SubtotalAmount_QNAME">_SubtotalAmount_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/ObjectFactory.html#_TaxAmount_QNAME">_TaxAmount_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/ObjectFactory.html#_TaxableAmount_QNAME">_TaxableAmount_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/ObjectFactory.html#_To_QNAME">_To_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/ObjectFactory.html#_UnitOfMeasure_QNAME">_UnitOfMeasure_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/ObjectFactory.html#_UnitPrice_QNAME">_UnitPrice_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/ObjectFactory.html#_UserAgent_QNAME">_UserAgent_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+
+</table>
+
+
+
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            </nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#ObjectFactory()">ObjectFactory</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.coupa.transaction
+ 
+</div>
+  
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="jd-sumtable"><tr><th colspan="12">Public Methods</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/Accounting.html">Accounting</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createAccounting()">createAccounting</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/Accounting.html">Accounting</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/AccountingSegment.html">AccountingSegment</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createAccountingSegment()">createAccountingSegment</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/AccountingSegment.html">AccountingSegment</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/CXML.html">CXML</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createCXML()">createCXML</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/CXML.html">CXML</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/Credential.html">Credential</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createCredential()">createCredential</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/Credential.html">Credential</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createCredentialType()">createCredentialType</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/Description.html">Description</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createDescription()">createDescription</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/Description.html">Description</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/Discount.html">Discount</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createDiscount()">createDiscount</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/Discount.html">Discount</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/DiscountPercent.html">DiscountPercent</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createDiscountPercent()">createDiscountPercent</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/DiscountPercent.html">DiscountPercent</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/Distribution.html">Distribution</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createDistribution()">createDistribution</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/Distribution.html">Distribution</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/DocumentReference.html">DocumentReference</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createDocumentReference()">createDocumentReference</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/DocumentReference.html">DocumentReference</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/Extrinsic.html">Extrinsic</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createExtrinsic()">createExtrinsic</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/Extrinsic.html">Extrinsic</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createFrom(com.coupa.transaction.CredentialType)">createFrom</a></span>(<a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/Header.html">Header</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createHeader()">createHeader</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/Header.html">Header</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/IdReference.html">IdReference</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createIdReference()">createIdReference</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/IdReference.html">IdReference</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;String&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createIdentity(java.lang.String)">createIdentity</a></span>(String value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code>String<code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createInvoiceDetailDiscount(com.coupa.transaction.MoneyType)">createInvoiceDetailDiscount</a></span>(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/InvoiceDetailHeaderIndicator.html">InvoiceDetailHeaderIndicator</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createInvoiceDetailHeaderIndicator()">createInvoiceDetailHeaderIndicator</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailHeaderIndicator.html">InvoiceDetailHeaderIndicator</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/InvoiceDetailItem.html">InvoiceDetailItem</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createInvoiceDetailItem()">createInvoiceDetailItem</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailItem.html">InvoiceDetailItem</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/InvoiceDetailItemReference.html">InvoiceDetailItemReference</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createInvoiceDetailItemReference()">createInvoiceDetailItemReference</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailItemReference.html">InvoiceDetailItemReference</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/InvoiceDetailLineIndicator.html">InvoiceDetailLineIndicator</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createInvoiceDetailLineIndicator()">createInvoiceDetailLineIndicator</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailLineIndicator.html">InvoiceDetailLineIndicator</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/InvoiceDetailOrder.html">InvoiceDetailOrder</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createInvoiceDetailOrder()">createInvoiceDetailOrder</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailOrder.html">InvoiceDetailOrder</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/InvoiceDetailOrderInfo.html">InvoiceDetailOrderInfo</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createInvoiceDetailOrderInfo()">createInvoiceDetailOrderInfo</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailOrderInfo.html">InvoiceDetailOrderInfo</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/InvoiceDetailRequest.html">InvoiceDetailRequest</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createInvoiceDetailRequest()">createInvoiceDetailRequest</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailRequest.html">InvoiceDetailRequest</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/InvoiceDetailRequestHeader.html">InvoiceDetailRequestHeader</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createInvoiceDetailRequestHeader()">createInvoiceDetailRequestHeader</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailRequestHeader.html">InvoiceDetailRequestHeader</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/InvoiceDetailServiceItem.html">InvoiceDetailServiceItem</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createInvoiceDetailServiceItem()">createInvoiceDetailServiceItem</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailServiceItem.html">InvoiceDetailServiceItem</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/InvoiceDetailServiceItemReference.html">InvoiceDetailServiceItemReference</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createInvoiceDetailServiceItemReference()">createInvoiceDetailServiceItemReference</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailServiceItemReference.html">InvoiceDetailServiceItemReference</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/InvoiceDetailSummary.html">InvoiceDetailSummary</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createInvoiceDetailSummary()">createInvoiceDetailSummary</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailSummary.html">InvoiceDetailSummary</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/MasterAgreementIDInfo.html">MasterAgreementIDInfo</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createMasterAgreementIDInfo()">createMasterAgreementIDInfo</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/MasterAgreementIDInfo.html">MasterAgreementIDInfo</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/Money.html">Money</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createMoney()">createMoney</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/Money.html">Money</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createMoneyType()">createMoneyType</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/Name.html">Name</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createName()">createName</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/Name.html">Name</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createNetAmount(com.coupa.transaction.MoneyType)">createNetAmount</a></span>(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/OrderReference.html">OrderReference</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createOrderReference()">createOrderReference</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/OrderReference.html">OrderReference</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/PaymentTerm.html">PaymentTerm</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createPaymentTerm()">createPaymentTerm</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/PaymentTerm.html">PaymentTerm</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/Request.html">Request</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createRequest()">createRequest</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/Request.html">Request</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/Sender.html">Sender</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createSender()">createSender</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/Sender.html">Sender</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;String&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createSharedSecret(java.lang.String)">createSharedSecret</a></span>(String value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code>String<code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createShippingAmount(com.coupa.transaction.MoneyType)">createShippingAmount</a></span>(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createSpecialHandlingAmount(com.coupa.transaction.MoneyType)">createSpecialHandlingAmount</a></span>(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createSubtotalAmount(com.coupa.transaction.MoneyType)">createSubtotalAmount</a></span>(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/Tax.html">Tax</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createTax()">createTax</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/Tax.html">Tax</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createTaxAmount(com.coupa.transaction.MoneyType)">createTaxAmount</a></span>(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/TaxDetail.html">TaxDetail</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createTaxDetail()">createTaxDetail</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/TaxDetail.html">TaxDetail</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/TaxLocation.html">TaxLocation</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createTaxLocation()">createTaxLocation</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/TaxLocation.html">TaxLocation</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createTaxableAmount(com.coupa.transaction.MoneyType)">createTaxableAmount</a></span>(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createTo(com.coupa.transaction.CredentialType)">createTo</a></span>(<a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../java/com/coupa/transaction/Transaction.html">Transaction</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createTransaction()">createTransaction</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../java/com/coupa/transaction/Transaction.html">Transaction</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;String&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createUnitOfMeasure(java.lang.String)">createUnitOfMeasure</a></span>(String value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code>String<code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createUnitPrice(com.coupa.transaction.MoneyType)">createUnitPrice</a></span>(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;String&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/ObjectFactory.html#createUserAgent(java.lang.String)">createUserAgent</a></span>(String value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code>String<code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-java.lang.Object-trigger"
+          src="../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  java.lang.Object
+
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Object</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">clone</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">equals</span>(Object arg0)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">finalize</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            Class&lt;?&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">getClass</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            int</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">hashCode</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">notify</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">notifyAll</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">toString</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>(long arg0)</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+</div><!-- jd-descr (summary) -->
+
+<!-- Details -->
+
+
+
+
+
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- Fields -->
+
+
+<!-- ========= FIELD DETAIL ======== -->
+<h2>Fields</h2>
+
+
+
+
+<A NAME="_From_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _From_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_Identity_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _Identity_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_InvoiceDetailDiscount_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _InvoiceDetailDiscount_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_NetAmount_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _NetAmount_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_SharedSecret_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _SharedSecret_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_ShippingAmount_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _ShippingAmount_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_SpecialHandlingAmount_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _SpecialHandlingAmount_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_SubtotalAmount_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _SubtotalAmount_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_TaxAmount_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _TaxAmount_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_TaxableAmount_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _TaxableAmount_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_To_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _To_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_UnitOfMeasure_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _UnitOfMeasure_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_UnitPrice_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _UnitPrice_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_UserAgent_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _UserAgent_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+
+<!-- Public ctors -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2>Public Constructors</h2>
+
+
+
+<A NAME="ObjectFactory()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">ObjectFactory</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.coupa.transaction
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2>Public Methods</h2>
+
+
+
+<A NAME="createAccounting()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/Accounting.html">Accounting</a>
+      </span>
+      <span class="sympad">createAccounting</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/Accounting.html">Accounting</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createAccountingSegment()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/AccountingSegment.html">AccountingSegment</a>
+      </span>
+      <span class="sympad">createAccountingSegment</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/AccountingSegment.html">AccountingSegment</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createCXML()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/CXML.html">CXML</a>
+      </span>
+      <span class="sympad">createCXML</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/CXML.html">CXML</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createCredential()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/Credential.html">Credential</a>
+      </span>
+      <span class="sympad">createCredential</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/Credential.html">Credential</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createCredentialType()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a>
+      </span>
+      <span class="sympad">createCredentialType</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createDescription()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/Description.html">Description</a>
+      </span>
+      <span class="sympad">createDescription</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/Description.html">Description</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createDiscount()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/Discount.html">Discount</a>
+      </span>
+      <span class="sympad">createDiscount</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/Discount.html">Discount</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createDiscountPercent()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/DiscountPercent.html">DiscountPercent</a>
+      </span>
+      <span class="sympad">createDiscountPercent</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/DiscountPercent.html">DiscountPercent</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createDistribution()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/Distribution.html">Distribution</a>
+      </span>
+      <span class="sympad">createDistribution</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/Distribution.html">Distribution</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createDocumentReference()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/DocumentReference.html">DocumentReference</a>
+      </span>
+      <span class="sympad">createDocumentReference</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/DocumentReference.html">DocumentReference</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createExtrinsic()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/Extrinsic.html">Extrinsic</a>
+      </span>
+      <span class="sympad">createExtrinsic</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/Extrinsic.html">Extrinsic</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createFrom(com.coupa.transaction.CredentialType)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a>&gt;
+      </span>
+      <span class="sympad">createFrom</span>
+      <span class="normal">(<a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createHeader()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/Header.html">Header</a>
+      </span>
+      <span class="sympad">createHeader</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/Header.html">Header</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createIdReference()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/IdReference.html">IdReference</a>
+      </span>
+      <span class="sympad">createIdReference</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/IdReference.html">IdReference</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createIdentity(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;String&gt;
+      </span>
+      <span class="sympad">createIdentity</span>
+      <span class="normal">(String value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code>String<code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createInvoiceDetailDiscount(com.coupa.transaction.MoneyType)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;
+      </span>
+      <span class="sympad">createInvoiceDetailDiscount</span>
+      <span class="normal">(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createInvoiceDetailHeaderIndicator()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/InvoiceDetailHeaderIndicator.html">InvoiceDetailHeaderIndicator</a>
+      </span>
+      <span class="sympad">createInvoiceDetailHeaderIndicator</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailHeaderIndicator.html">InvoiceDetailHeaderIndicator</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createInvoiceDetailItem()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/InvoiceDetailItem.html">InvoiceDetailItem</a>
+      </span>
+      <span class="sympad">createInvoiceDetailItem</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailItem.html">InvoiceDetailItem</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createInvoiceDetailItemReference()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/InvoiceDetailItemReference.html">InvoiceDetailItemReference</a>
+      </span>
+      <span class="sympad">createInvoiceDetailItemReference</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailItemReference.html">InvoiceDetailItemReference</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createInvoiceDetailLineIndicator()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/InvoiceDetailLineIndicator.html">InvoiceDetailLineIndicator</a>
+      </span>
+      <span class="sympad">createInvoiceDetailLineIndicator</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailLineIndicator.html">InvoiceDetailLineIndicator</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createInvoiceDetailOrder()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/InvoiceDetailOrder.html">InvoiceDetailOrder</a>
+      </span>
+      <span class="sympad">createInvoiceDetailOrder</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailOrder.html">InvoiceDetailOrder</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createInvoiceDetailOrderInfo()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/InvoiceDetailOrderInfo.html">InvoiceDetailOrderInfo</a>
+      </span>
+      <span class="sympad">createInvoiceDetailOrderInfo</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailOrderInfo.html">InvoiceDetailOrderInfo</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createInvoiceDetailRequest()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/InvoiceDetailRequest.html">InvoiceDetailRequest</a>
+      </span>
+      <span class="sympad">createInvoiceDetailRequest</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailRequest.html">InvoiceDetailRequest</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createInvoiceDetailRequestHeader()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/InvoiceDetailRequestHeader.html">InvoiceDetailRequestHeader</a>
+      </span>
+      <span class="sympad">createInvoiceDetailRequestHeader</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailRequestHeader.html">InvoiceDetailRequestHeader</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createInvoiceDetailServiceItem()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/InvoiceDetailServiceItem.html">InvoiceDetailServiceItem</a>
+      </span>
+      <span class="sympad">createInvoiceDetailServiceItem</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailServiceItem.html">InvoiceDetailServiceItem</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createInvoiceDetailServiceItemReference()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/InvoiceDetailServiceItemReference.html">InvoiceDetailServiceItemReference</a>
+      </span>
+      <span class="sympad">createInvoiceDetailServiceItemReference</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailServiceItemReference.html">InvoiceDetailServiceItemReference</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createInvoiceDetailSummary()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/InvoiceDetailSummary.html">InvoiceDetailSummary</a>
+      </span>
+      <span class="sympad">createInvoiceDetailSummary</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/InvoiceDetailSummary.html">InvoiceDetailSummary</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createMasterAgreementIDInfo()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/MasterAgreementIDInfo.html">MasterAgreementIDInfo</a>
+      </span>
+      <span class="sympad">createMasterAgreementIDInfo</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/MasterAgreementIDInfo.html">MasterAgreementIDInfo</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createMoney()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/Money.html">Money</a>
+      </span>
+      <span class="sympad">createMoney</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/Money.html">Money</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createMoneyType()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>
+      </span>
+      <span class="sympad">createMoneyType</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createName()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/Name.html">Name</a>
+      </span>
+      <span class="sympad">createName</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/Name.html">Name</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createNetAmount(com.coupa.transaction.MoneyType)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;
+      </span>
+      <span class="sympad">createNetAmount</span>
+      <span class="normal">(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createOrderReference()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/OrderReference.html">OrderReference</a>
+      </span>
+      <span class="sympad">createOrderReference</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/OrderReference.html">OrderReference</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createPaymentTerm()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/PaymentTerm.html">PaymentTerm</a>
+      </span>
+      <span class="sympad">createPaymentTerm</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/PaymentTerm.html">PaymentTerm</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createRequest()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/Request.html">Request</a>
+      </span>
+      <span class="sympad">createRequest</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/Request.html">Request</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createSender()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/Sender.html">Sender</a>
+      </span>
+      <span class="sympad">createSender</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/Sender.html">Sender</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createSharedSecret(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;String&gt;
+      </span>
+      <span class="sympad">createSharedSecret</span>
+      <span class="normal">(String value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code>String<code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createShippingAmount(com.coupa.transaction.MoneyType)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;
+      </span>
+      <span class="sympad">createShippingAmount</span>
+      <span class="normal">(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createSpecialHandlingAmount(com.coupa.transaction.MoneyType)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;
+      </span>
+      <span class="sympad">createSpecialHandlingAmount</span>
+      <span class="normal">(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createSubtotalAmount(com.coupa.transaction.MoneyType)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;
+      </span>
+      <span class="sympad">createSubtotalAmount</span>
+      <span class="normal">(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createTax()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/Tax.html">Tax</a>
+      </span>
+      <span class="sympad">createTax</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/Tax.html">Tax</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createTaxAmount(com.coupa.transaction.MoneyType)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;
+      </span>
+      <span class="sympad">createTaxAmount</span>
+      <span class="normal">(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createTaxDetail()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/TaxDetail.html">TaxDetail</a>
+      </span>
+      <span class="sympad">createTaxDetail</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/TaxDetail.html">TaxDetail</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createTaxLocation()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/TaxLocation.html">TaxLocation</a>
+      </span>
+      <span class="sympad">createTaxLocation</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/TaxLocation.html">TaxLocation</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createTaxableAmount(com.coupa.transaction.MoneyType)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;
+      </span>
+      <span class="sympad">createTaxableAmount</span>
+      <span class="normal">(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createTo(com.coupa.transaction.CredentialType)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a>&gt;
+      </span>
+      <span class="sympad">createTo</span>
+      <span class="normal">(<a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/CredentialType.html">CredentialType</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createTransaction()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../java/com/coupa/transaction/Transaction.html">Transaction</a>
+      </span>
+      <span class="sympad">createTransaction</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../java/com/coupa/transaction/Transaction.html">Transaction</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createUnitOfMeasure(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;String&gt;
+      </span>
+      <span class="sympad">createUnitOfMeasure</span>
+      <span class="normal">(String value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code>String<code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createUnitPrice(com.coupa.transaction.MoneyType)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a>&gt;
+      </span>
+      <span class="sympad">createUnitPrice</span>
+      <span class="normal">(<a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../java/com/coupa/transaction/MoneyType.html">MoneyType</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createUserAgent(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;String&gt;
+      </span>
+      <span class="sympad">createUserAgent</span>
+      <span class="normal">(String value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code>String<code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+<A NAME="navbar_top"></A>
+
+<div id="footer">
+Generated by <a href="http://www.mulesoft.com/devkit">Mule DevKit</a>. Document generation technology based on <a href="http://code.google.com/p/doclava/">Google's Doclava</a>.
+</div> <!-- end footer -->
+
+</div> <!-- jd-content -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize mule-developer-docs.js */
+</script>
+
+</body>
+</html>

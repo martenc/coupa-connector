@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="description" content="Documentation for Mule Coupa Connector." />
+
+<link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" />
+<title>
+
+  RequisitionHeader.Approvals
+
+
+| Mule Coupa Connector
+
+</title>
+<link href="../../../../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../assets/mule-developer-prettify.css" rel="stylesheet" type="text/css" />
+<link href="../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+<script src="../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../../../../assets/mule-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../assets/prettify.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("../../../../", "../../../../assets/");
+</script>
+<script src="../../../../assets/mule-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../../../../assets/customizations.js" type="text/javascript"></script>
+<noscript>
+  <style type="text/css">
+    html,body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="">
+
+<div id="header">
+    <div id="headerLeft">
+    
+      <span id="masthead-title">Mule Coupa Connector</span>
+    
+    <ul id="header-tabs" class="">
+    
+    	<li id="guide"><a href="../../../../guide/install.html">
+	    	<span class="en">Install Guide</span>
+    	</a></li>
+    
+    	<li id="java"><a href="../../../../java/packages.html">
+	    	<span class="en">Java API Reference</span>
+    	</a></li>
+    
+    	<li id="mule"><a href="../../../../mule/modules.html">
+	    	<span class="en">Mule API Reference</span>
+    	</a></li>
+    
+    </ul>
+    </div>
+    <div id="headerRight">
+      <a href="http://www.mulesoft.com" tabindex="-1">
+      <img src="../../../../assets//images/mulesoft-logo-final.gif" alt="MuleSoft" border="0" id="mulesoftlogo"></a><br/>
+      
+  <div id="search" >
+      <div id="searchForm">
+          <form accept-charset="utf-8" class="gsc-search-box" 
+                onsubmit="return submit_search()">
+            <table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody>
+                <tr>
+                  <td class="gsc-input">
+                    <input id="search_autocomplete" class="gsc-input" type="text" size="33" autocomplete="off"
+                      title="search developer docs" name="q"
+                      value="search developer docs"
+                      onFocus="search_focus_changed(this, true)"
+                      onBlur="search_focus_changed(this, false)"
+                      onkeydown="return search_changed(event, true, '../../../../')"
+                      onkeyup="return search_changed(event, false, '../../../../')" />
+                  <div id="search_filtered_div" class="no-display">
+                      <table id="search_filtered" cellspacing=0>
+                      </table>
+                  </div>
+                  </td>
+                  <td class="gsc-search-button">
+                    <input type="submit" value="Search" title="search" id="search-button" class="gsc-search-button" />
+                  </td>
+                  <td class="gsc-clear-button">
+                    <div title="clear results" class="gsc-clear-button">&nbsp;</div>
+                  </td>
+                </tr></tbody>
+              </table>
+          </form>
+      </div><!-- searchForm -->
+  </div><!-- search -->
+      
+    </div>
+</div><!-- header -->
+
+
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="swapper">
+        <div id="nav-panels">
+          <div id="resize-packages-nav">
+            <div id="packages-nav">
+              <div id="index-links">
+                <a href="../../../../java/packages.html"  >Package Index</a> |
+                <a href="../../../../java/classes.html" >Class Index</a>
+              </div>
+              <ul>
+                
+    <li class="api apilevel-">
+  <a href="../../../../java/com/coupa/api/package-summary.html">com.coupa.api</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../java/com/coupa/api/impl/package-summary.html">com.coupa.api.impl</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../java/com/coupa/api/impl/internal/package-summary.html">com.coupa.api.impl.internal</a></li>
+    <li class="selected api apilevel-">
+  <a href="../../../../java/com/coupa/resources/package-summary.html">com.coupa.resources</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../java/com/coupa/transaction/package-summary.html">com.coupa.transaction</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../java/org/mule/modules/coupa/package-summary.html">org.mule.modules.coupa</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../java/org/mule/modules/coupa/config/package-summary.html">org.mule.modules.coupa.config</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../java/org/mule/modules/coupa/config/spring/package-summary.html">org.mule.modules.coupa.config.spring</a></li>
+              </ul><br/>
+            </div> <!-- end packages -->
+          </div> <!-- end resize-packages -->
+          <div id="classes-nav">
+            <ul>
+              
+              
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/Account.html">Account</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/AccountSummary.html">AccountSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/AccountTypeSummary.html">AccountTypeSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/Address.html">Address</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/AddressSummary.html">AddressSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ApprovalLimitSummary.html">ApprovalLimitSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ApprovalSummary.html">ApprovalSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/AssetTagSummary.html">AssetTagSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/AttachmentLinkSummary.html">AttachmentLinkSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/AttachmentSummary.html">AttachmentSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/BudgetLine.html">BudgetLine</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/BusinessGroupSummary.html">BusinessGroupSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/Commodity.html">Commodity</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/CommoditySummary.html">CommoditySummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ContactSummary.html">ContactSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/Contract.html">Contract</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/Contract.BusinessGroups.html">Contract.BusinessGroups</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ContractSummary.html">ContractSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ContractSummary.BusinessGroups.html">ContractSummary.BusinessGroups</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/CountrySummary.html">CountrySummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/Currency.html">Currency</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/CurrencySummary.html">CurrencySummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/DepartmentSummary.html">DepartmentSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/Errors.html">Errors</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ExchangeRate.html">ExchangeRate</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ExpenseCategorySummary.html">ExpenseCategorySummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ExpenseLineSummary.html">ExpenseLineSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ExpensePolicyViolationSummary.html">ExpensePolicyViolationSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ExpenseReport.html">ExpenseReport</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ExpenseReport.Approvals.html">ExpenseReport.Approvals</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ExpenseReport.Events.html">ExpenseReport.Events</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ExpenseReport.ExpenseLines.html">ExpenseReport.ExpenseLines</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ExpenseReport.ExpensePolicyViolations.html">ExpenseReport.ExpensePolicyViolations</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ExpenseReportEventHistorySummary.html">ExpenseReportEventHistorySummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/FormSummary.html">FormSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/InspectionCodeSummary.html">InspectionCodeSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/InventoryTransaction.html">InventoryTransaction</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/InventoryTransaction.AssetTags.html">InventoryTransaction.AssetTags</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/InventoryTransaction.Attachments.html">InventoryTransaction.Attachments</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/InvoiceHeader.html">InvoiceHeader</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/InvoiceHeader.Attachments.html">InvoiceHeader.Attachments</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/InvoiceHeader.InvoiceLines.html">InvoiceHeader.InvoiceLines</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/InvoiceHeader.Payments.html">InvoiceHeader.Payments</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/InvoiceLineSummary.html">InvoiceLineSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/Item.html">Item</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ItemSummary.html">ItemSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ObjectFactory.html">ObjectFactory</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeader.html">OrderHeader</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeader.Attachments.html">OrderHeader.Attachments</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeader.OrderLines.html">OrderHeader.OrderLines</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.html">OrderHeaderRevision</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.AcknowledgedFlag.html">OrderHeaderRevision.AcknowledgedFlag</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.Attachments.html">OrderHeaderRevision.Attachments</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.CreatedAt.html">OrderHeaderRevision.CreatedAt</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.CreatedBy.html">OrderHeaderRevision.CreatedBy</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.Exported.html">OrderHeaderRevision.Exported</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.OrderLines.html">OrderHeaderRevision.OrderLines</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.PaymentTerm.html">OrderHeaderRevision.PaymentTerm</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.RevisionRecord.html">OrderHeaderRevision.RevisionRecord</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.ShippingTerm.html">OrderHeaderRevision.ShippingTerm</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.ShipToAddress.html">OrderHeaderRevision.ShipToAddress</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.ShipToUser.html">OrderHeaderRevision.ShipToUser</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.Status.html">OrderHeaderRevision.Status</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.Supplier.html">OrderHeaderRevision.Supplier</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.TransmissionStatus.html">OrderHeaderRevision.TransmissionStatus</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.UpdatedAt.html">OrderHeaderRevision.UpdatedAt</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.UpdatedBy.html">OrderHeaderRevision.UpdatedBy</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderHeaderRevision.Version.html">OrderHeaderRevision.Version</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummary.html">OrderLineSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummary.AssetTags.html">OrderLineSummary.AssetTags</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummary.Attachments.html">OrderLineSummary.Attachments</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.html">OrderLineSummaryRevision</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Account.html">OrderLineSummaryRevision.Account</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.AccountingTotal.html">OrderLineSummaryRevision.AccountingTotal</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.AccountingTotalCurrency.html">OrderLineSummaryRevision.AccountingTotalCurrency</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.AssetTags.html">OrderLineSummaryRevision.AssetTags</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Attachments.html">OrderLineSummaryRevision.Attachments</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Commodity.html">OrderLineSummaryRevision.Commodity</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Contract.html">OrderLineSummaryRevision.Contract</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.CreatedAt.html">OrderLineSummaryRevision.CreatedAt</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.CreatedBy.html">OrderLineSummaryRevision.CreatedBy</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Currency.html">OrderLineSummaryRevision.Currency</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Department.html">OrderLineSummaryRevision.Department</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Description.html">OrderLineSummaryRevision.Description</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Invoiced.html">OrderLineSummaryRevision.Invoiced</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Item.html">OrderLineSummaryRevision.Item</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.NeedByDate.html">OrderLineSummaryRevision.NeedByDate</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.OrderHeaderId.html">OrderLineSummaryRevision.OrderHeaderId</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Period.html">OrderLineSummaryRevision.Period</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Price.html">OrderLineSummaryRevision.Price</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Quantity.html">OrderLineSummaryRevision.Quantity</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Received.html">OrderLineSummaryRevision.Received</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.ReportingTotal.html">OrderLineSummaryRevision.ReportingTotal</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.SavingsPct.html">OrderLineSummaryRevision.SavingsPct</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.SourcePartNum.html">OrderLineSummaryRevision.SourcePartNum</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Status.html">OrderLineSummaryRevision.Status</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.SubLineNum.html">OrderLineSummaryRevision.SubLineNum</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.SuppAuxPartNum.html">OrderLineSummaryRevision.SuppAuxPartNum</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Supplier.html">OrderLineSummaryRevision.Supplier</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.SupplierOrderNumber.html">OrderLineSummaryRevision.SupplierOrderNumber</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Total.html">OrderLineSummaryRevision.Total</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Type.html">OrderLineSummaryRevision.Type</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Uom.html">OrderLineSummaryRevision.Uom</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.UpdatedAt.html">OrderLineSummaryRevision.UpdatedAt</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.UpdatedBy.html">OrderLineSummaryRevision.UpdatedBy</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/OrderLineSummaryRevision.Version.html">OrderLineSummaryRevision.Version</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/PaymentSummary.html">PaymentSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/PaymentTerm.html">PaymentTerm</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/PaymentTermSummary.html">PaymentTermSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/PeriodSummary.html">PeriodSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/PhoneNumberSummary.html">PhoneNumberSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/PunchoutSite.html">PunchoutSite</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/PunchoutSiteSummary.html">PunchoutSiteSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/RequisitionHeader.html">RequisitionHeader</a></li>
+          <li class="selected api apilevel-"><a href="../../../../java/com/coupa/resources/RequisitionHeader.Approvals.html">RequisitionHeader.Approvals</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/RequisitionHeader.Attachments.html">RequisitionHeader.Attachments</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/RequisitionHeader.RequisitionLines.html">RequisitionHeader.RequisitionLines</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/RequisitionLineSummary.html">RequisitionLineSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/RequisitionLineSummary.AssetTags.html">RequisitionLineSummary.AssetTags</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/RequisitionLineSummary.Attachments.html">RequisitionLineSummary.Attachments</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/Resource.html">Resource</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/Resources.html">Resources</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/RestBoolean.html">RestBoolean</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/RoleSummary.html">RoleSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ShippingTerm.html">ShippingTerm</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/ShippingTermSummary.html">ShippingTermSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/Supplier.html">Supplier</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/SupplierSummary.html">SupplierSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/TaxCodeSummary.html">TaxCodeSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/UomSummary.html">UomSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/User.html">User</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/User.Roles.html">User.Roles</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/UserSummary.html">UserSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/WarehouseLocationSummary.html">WarehouseLocationSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/WarehouseSummary.html">WarehouseSummary</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/resources/WarehouseTypeSummary.html">WarehouseTypeSummary</a></li>
+      </ul>
+    </li>
+              
+              
+              
+              
+            </ul><br/>
+          </div><!-- end classes -->
+        </div><!-- end nav-panels -->
+        <div id="nav-tree" style="display:none">
+          <div id="index-links">
+            <a href="../../../../packages.html"  >Package Index</a> | 
+            <a href="../../../../classes.html" >Class Index</a>
+          </div>
+        </div><!-- end nav-tree -->
+      </div><!-- end swapper -->
+    </div> <!-- end side-nav -->
+    <script>
+      if (!isMobile) {
+        $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav");
+        chooseDefaultNav();
+        if ($("#nav-tree").is(':visible')) {
+          init_default_navtree("../../../../");
+        } else {
+          addLoadEvent(function() {
+            scrollIntoView("packages-nav");
+            scrollIntoView("classes-nav");
+          });
+        }
+        $("#swapper").css({borderBottom:"2px solid #aaa"});
+      } else {
+        swapNav(); // tree view should be used on mobile
+      }
+    </script>
+
+
+
+<div class="g-unit" id="doc-content">
+
+<div id="api-info-block">
+
+
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+
+Summary:
+
+
+
+
+
+
+
+  <a href="#lfields">Fields</a>
+  
+
+
+
+  &#124; <a href="#pubctors">Ctors</a>
+  
+
+
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+<div class="api-level">
+  
+
+
+  
+  
+
+</div>
+</div><!-- end api-info-block -->
+
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<div id="jd-header">
+    public
+    static 
+     
+    
+    class
+<h1>RequisitionHeader.Approvals</h1>
+
+
+
+  
+    extends Object<br/>
+  
+  
+  
+
+  
+  
+  
+
+
+</div><!-- end header -->
+
+<div id="naMessage"></div>
+
+<div id="jd-content" class="api apilevel-">
+<table class="jd-inheritance-table">
+
+
+    <tr>
+        
+        <td colspan="2" class="jd-inheritance-class-cell">java.lang.Object</td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+        
+        <td colspan="1" class="jd-inheritance-class-cell">com.coupa.resources.RequisitionHeader.Approvals</td>
+    </tr>
+    
+
+</table>
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Class Overview</h2>
+<p><p>Java class for anonymous complex type.
+
+ <p>The following schema fragment specifies the expected content contained within this class.
+
+ <pre>
+ &lt;complexType>
+   &lt;complexContent>
+     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+       &lt;sequence>
+         &lt;element name="approval" type="{}approval-summary" maxOccurs="unbounded" minOccurs="0"/>
+       &lt;/sequence>
+     &lt;/restriction>
+   &lt;/complexContent>
+ &lt;/complexType>
+ </pre>
+
+
+</p>
+
+
+
+
+
+</div><!-- jd-descr -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Summary</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========== FIELD SUMMARY =========== -->
+<table id="lfields" class="jd-sumtable"><tr><th colspan="12">Fields</th></tr>
+
+
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          protected
+          
+          
+          List&lt;<a href="../../../../java/com/coupa/resources/ApprovalSummary.html">ApprovalSummary</a>&gt;</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/resources/RequisitionHeader.Approvals.html#approval">approval</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+
+</table>
+
+
+
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            </nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/resources/RequisitionHeader.Approvals.html#RequisitionHeader.Approvals()">RequisitionHeader.Approvals</a></span>()</nobr>
+        
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="jd-sumtable"><tr><th colspan="12">Public Methods</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            List&lt;<a href="../../../../java/com/coupa/resources/ApprovalSummary.html">ApprovalSummary</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/coupa/resources/RequisitionHeader.Approvals.html#getApproval()">getApproval</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Gets the value of the approval property.</div>
+  
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-java.lang.Object-trigger"
+          src="../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  java.lang.Object
+
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Object</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">clone</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">equals</span>(Object arg0)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">finalize</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            Class&lt;?&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">getClass</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            int</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">hashCode</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">notify</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">notifyAll</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">toString</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>(long arg0)</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+</div><!-- jd-descr (summary) -->
+
+<!-- Details -->
+
+
+
+
+
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- Fields -->
+
+
+<!-- ========= FIELD DETAIL ======== -->
+<h2>Fields</h2>
+
+
+
+
+<A NAME="approval"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+         
+        List&lt;<a href="../../../../java/com/coupa/resources/ApprovalSummary.html">ApprovalSummary</a>&gt;
+      </span>
+        approval
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+
+<!-- Public ctors -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2>Public Constructors</h2>
+
+
+
+<A NAME="RequisitionHeader.Approvals()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">RequisitionHeader.Approvals</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2>Public Methods</h2>
+
+
+
+<A NAME="getApproval()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        List&lt;<a href="../../../../java/com/coupa/resources/ApprovalSummary.html">ApprovalSummary</a>&gt;
+      </span>
+      <span class="sympad">getApproval</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Gets the value of the approval property.
+
+ <p>
+ This accessor method returns a reference to the live list,
+ not a snapshot. Therefore any modification you make to the
+ returned list will be present inside the JAXB object.
+ This is why there is not a <CODE>set</CODE> method for the approval property.
+
+ <p>
+ For example, to add a new item, do as follows:
+ <pre>
+    getApproval().add(newItem);
+ </pre>
+
+
+ <p>
+ Objects of the following type(s) are allowed in the list
+ <code><a href="../../../../java/com/coupa/resources/ApprovalSummary.html">ApprovalSummary</a></code>
+
+
+</p></div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+<A NAME="navbar_top"></A>
+
+<div id="footer">
+Generated by <a href="http://www.mulesoft.com/devkit">Mule DevKit</a>. Document generation technology based on <a href="http://code.google.com/p/doclava/">Google's Doclava</a>.
+</div> <!-- end footer -->
+
+</div> <!-- jd-content -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize mule-developer-docs.js */
+</script>
+
+</body>
+</html>

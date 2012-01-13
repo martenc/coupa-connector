@@ -1,0 +1,9 @@
+com.coupa.api
+com.coupa.api.impl
+com.coupa.api.impl.internal
+com.coupa.resources
+com.coupa.transaction
+org.mule.modules.coupa
+org.mule.modules.coupa.config
+org.mule.modules.coupa.config.spring
+

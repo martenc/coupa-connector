@@ -1,0 +1,3405 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<style>
+    .jd-hierarchy-spacer {
+        width: 15px;
+    }
+    .jd-hierarchy-data {
+        text-align: left;
+        vertical-align: top;
+    }
+</style>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="description" content="Documentation for Mule Coupa Connector." />
+
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+<title>
+
+  Class Hierarchy
+
+
+| Mule Coupa Connector
+
+</title>
+<link href="../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../assets/mule-developer-prettify.css" rel="stylesheet" type="text/css" />
+<link href="../assets/customizations.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+<script src="../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../assets/mule-developer-docs.js" type="text/javascript"></script>
+<script src="../assets/prettify.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("../", "../assets/");
+</script>
+<script src="../assets/mule-developer-reference.js" type="text/javascript"></script>
+<script src="../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../assets/customizations.js" type="text/javascript"></script>
+<noscript>
+  <style type="text/css">
+    html,body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+
+<div id="header">
+    <div id="headerLeft">
+    
+      <span id="masthead-title">Mule Coupa Connector</span>
+    
+    <ul id="header-tabs" class="java">
+    
+    	<li id="guide"><a href="../guide/install.html">
+	    	<span class="en">Install Guide</span>
+    	</a></li>
+    
+    	<li id="java"><a href="../java/packages.html">
+	    	<span class="en">Java API Reference</span>
+    	</a></li>
+    
+    	<li id="mule"><a href="../mule/modules.html">
+	    	<span class="en">Mule API Reference</span>
+    	</a></li>
+    
+    </ul>
+    </div>
+    <div id="headerRight">
+      <a href="http://www.mulesoft.com" tabindex="-1">
+      <img src="../assets//images/mulesoft-logo-final.gif" alt="MuleSoft" border="0" id="mulesoftlogo"></a><br/>
+      
+  <div id="search" >
+      <div id="searchForm">
+          <form accept-charset="utf-8" class="gsc-search-box" 
+                onsubmit="return submit_search()">
+            <table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody>
+                <tr>
+                  <td class="gsc-input">
+                    <input id="search_autocomplete" class="gsc-input" type="text" size="33" autocomplete="off"
+                      title="search developer docs" name="q"
+                      value="search developer docs"
+                      onFocus="search_focus_changed(this, true)"
+                      onBlur="search_focus_changed(this, false)"
+                      onkeydown="return search_changed(event, true, '../')"
+                      onkeyup="return search_changed(event, false, '../')" />
+                  <div id="search_filtered_div" class="no-display">
+                      <table id="search_filtered" cellspacing=0>
+                      </table>
+                  </div>
+                  </td>
+                  <td class="gsc-search-button">
+                    <input type="submit" value="Search" title="search" id="search-button" class="gsc-search-button" />
+                  </td>
+                  <td class="gsc-clear-button">
+                    <div title="clear results" class="gsc-clear-button">&nbsp;</div>
+                  </td>
+                </tr></tbody>
+              </table>
+          </form>
+      </div><!-- searchForm -->
+  </div><!-- search -->
+      
+    </div>
+</div><!-- header -->
+
+
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="swapper">
+        <div id="nav-panels">
+          <div id="resize-packages-nav">
+            <div id="packages-nav">
+              <div id="index-links">
+                <a href="../java/packages.html"  >Package Index</a> |
+                <a href="../java/classes.html" >Class Index</a>
+              </div>
+              <ul>
+                
+    <li class="api apilevel-">
+  <a href="../java/com/coupa/api/package-summary.html">com.coupa.api</a></li>
+    <li class="api apilevel-">
+  <a href="../java/com/coupa/api/impl/package-summary.html">com.coupa.api.impl</a></li>
+    <li class="api apilevel-">
+  <a href="../java/com/coupa/api/impl/internal/package-summary.html">com.coupa.api.impl.internal</a></li>
+    <li class="api apilevel-">
+  <a href="../java/com/coupa/resources/package-summary.html">com.coupa.resources</a></li>
+    <li class="api apilevel-">
+  <a href="../java/com/coupa/transaction/package-summary.html">com.coupa.transaction</a></li>
+    <li class="api apilevel-">
+  <a href="../java/org/mule/modules/coupa/package-summary.html">org.mule.modules.coupa</a></li>
+    <li class="api apilevel-">
+  <a href="../java/org/mule/modules/coupa/config/package-summary.html">org.mule.modules.coupa.config</a></li>
+    <li class="api apilevel-">
+  <a href="../java/org/mule/modules/coupa/config/spring/package-summary.html">org.mule.modules.coupa.config.spring</a></li>
+              </ul><br/>
+            </div> <!-- end packages -->
+          </div> <!-- end resize-packages -->
+          <div id="classes-nav">
+              <script>
+                /*addLoadEvent(maxPackageHeight);*/
+              </script>
+              <p style="padding:10px">Select a package to view its members</p><br/>
+          </div><!-- end classes -->
+        </div><!-- end nav-panels -->
+        <div id="nav-tree" style="display:none">
+          <div id="index-links">
+            <a href="../packages.html"  >Package Index</a> | 
+            <a href="../classes.html" >Class Index</a>
+          </div>
+        </div><!-- end nav-tree -->
+      </div><!-- end swapper -->
+    </div> <!-- end side-nav -->
+    <script>
+      if (!isMobile) {
+        $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav");
+        chooseDefaultNav();
+        if ($("#nav-tree").is(':visible')) {
+          init_default_navtree("../");
+        } else {
+          addLoadEvent(function() {
+            scrollIntoView("packages-nav");
+            scrollIntoView("classes-nav");
+          });
+        }
+        $("#swapper").css({borderBottom:"2px solid #aaa"});
+      } else {
+        swapNav(); // tree view should be used on mobile
+      }
+    </script>
+
+
+
+<div class="g-unit" id="doc-content">
+
+<div id="jd-header">
+<h1>Class Hierarchy</h1>
+</div>
+
+<div id="jd-content">
+
+<div style="margin-left: 20px; margin-right: 20px;">
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="1">
+<th class="jd-hierarchy-data" colspan="4">Class</th>
+<th class="jd-hierarchy-data">Interfaces</th>
+
+
+<tr>
+    
+    <td class="jd-hierarchy-data" colspan="4">
+    
+        
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/api/impl/DefaultRepository.html">DefaultRepository</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            <a href="../java/com/coupa/api/Repository.html">Repository</a>
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/api/impl/JerseyClient.html">JerseyClient</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            <a href="../java/com/coupa/api/Client.html">Client</a>
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/api/impl/internal/XMLToHashMapAdapter.html">XMLToHashMapAdapter</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/AccountSummary.html">AccountSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/AccountTypeSummary.html">AccountTypeSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/AddressSummary.html">AddressSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ApprovalLimitSummary.html">ApprovalLimitSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ApprovalSummary.html">ApprovalSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/AssetTagSummary.html">AssetTagSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/AttachmentLinkSummary.html">AttachmentLinkSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/AttachmentSummary.html">AttachmentSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/BusinessGroupSummary.html">BusinessGroupSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/CommoditySummary.html">CommoditySummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ContactSummary.html">ContactSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/Contract.BusinessGroups.html">Contract.BusinessGroups</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ContractSummary.html">ContractSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ContractSummary.BusinessGroups.html">ContractSummary.BusinessGroups</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/CountrySummary.html">CountrySummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/CurrencySummary.html">CurrencySummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/DepartmentSummary.html">DepartmentSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/Errors.html">Errors</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ExpenseCategorySummary.html">ExpenseCategorySummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ExpenseLineSummary.html">ExpenseLineSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ExpensePolicyViolationSummary.html">ExpensePolicyViolationSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ExpenseReport.Approvals.html">ExpenseReport.Approvals</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ExpenseReport.Events.html">ExpenseReport.Events</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ExpenseReport.ExpenseLines.html">ExpenseReport.ExpenseLines</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ExpenseReport.ExpensePolicyViolations.html">ExpenseReport.ExpensePolicyViolations</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ExpenseReportEventHistorySummary.html">ExpenseReportEventHistorySummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/FormSummary.html">FormSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/InspectionCodeSummary.html">InspectionCodeSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/InventoryTransaction.AssetTags.html">InventoryTransaction.AssetTags</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/InventoryTransaction.Attachments.html">InventoryTransaction.Attachments</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/InvoiceHeader.Attachments.html">InvoiceHeader.Attachments</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/InvoiceHeader.InvoiceLines.html">InvoiceHeader.InvoiceLines</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/InvoiceHeader.Payments.html">InvoiceHeader.Payments</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/InvoiceLineSummary.html">InvoiceLineSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ItemSummary.html">ItemSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ObjectFactory.html">ObjectFactory</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeader.Attachments.html">OrderHeader.Attachments</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeader.OrderLines.html">OrderHeader.OrderLines</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.AcknowledgedFlag.html">OrderHeaderRevision.AcknowledgedFlag</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.Attachments.html">OrderHeaderRevision.Attachments</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.CreatedAt.html">OrderHeaderRevision.CreatedAt</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.CreatedBy.html">OrderHeaderRevision.CreatedBy</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.Exported.html">OrderHeaderRevision.Exported</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.OrderLines.html">OrderHeaderRevision.OrderLines</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.PaymentTerm.html">OrderHeaderRevision.PaymentTerm</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.RevisionRecord.html">OrderHeaderRevision.RevisionRecord</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.ShipToAddress.html">OrderHeaderRevision.ShipToAddress</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.ShipToUser.html">OrderHeaderRevision.ShipToUser</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.ShippingTerm.html">OrderHeaderRevision.ShippingTerm</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.Status.html">OrderHeaderRevision.Status</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.Supplier.html">OrderHeaderRevision.Supplier</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.TransmissionStatus.html">OrderHeaderRevision.TransmissionStatus</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.UpdatedAt.html">OrderHeaderRevision.UpdatedAt</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.UpdatedBy.html">OrderHeaderRevision.UpdatedBy</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.Version.html">OrderHeaderRevision.Version</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummary.html">OrderLineSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummary.AssetTags.html">OrderLineSummary.AssetTags</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummary.Attachments.html">OrderLineSummary.Attachments</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.html">OrderLineSummaryRevision</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Account.html">OrderLineSummaryRevision.Account</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.AccountingTotal.html">OrderLineSummaryRevision.AccountingTotal</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.AccountingTotalCurrency.html">OrderLineSummaryRevision.AccountingTotalCurrency</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.AssetTags.html">OrderLineSummaryRevision.AssetTags</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Attachments.html">OrderLineSummaryRevision.Attachments</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Commodity.html">OrderLineSummaryRevision.Commodity</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Contract.html">OrderLineSummaryRevision.Contract</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.CreatedAt.html">OrderLineSummaryRevision.CreatedAt</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.CreatedBy.html">OrderLineSummaryRevision.CreatedBy</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Currency.html">OrderLineSummaryRevision.Currency</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Department.html">OrderLineSummaryRevision.Department</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Description.html">OrderLineSummaryRevision.Description</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Invoiced.html">OrderLineSummaryRevision.Invoiced</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Item.html">OrderLineSummaryRevision.Item</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.NeedByDate.html">OrderLineSummaryRevision.NeedByDate</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.OrderHeaderId.html">OrderLineSummaryRevision.OrderHeaderId</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Period.html">OrderLineSummaryRevision.Period</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Price.html">OrderLineSummaryRevision.Price</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Quantity.html">OrderLineSummaryRevision.Quantity</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Received.html">OrderLineSummaryRevision.Received</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.ReportingTotal.html">OrderLineSummaryRevision.ReportingTotal</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.SavingsPct.html">OrderLineSummaryRevision.SavingsPct</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.SourcePartNum.html">OrderLineSummaryRevision.SourcePartNum</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Status.html">OrderLineSummaryRevision.Status</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.SubLineNum.html">OrderLineSummaryRevision.SubLineNum</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.SuppAuxPartNum.html">OrderLineSummaryRevision.SuppAuxPartNum</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Supplier.html">OrderLineSummaryRevision.Supplier</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.SupplierOrderNumber.html">OrderLineSummaryRevision.SupplierOrderNumber</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Total.html">OrderLineSummaryRevision.Total</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Type.html">OrderLineSummaryRevision.Type</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Uom.html">OrderLineSummaryRevision.Uom</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.UpdatedAt.html">OrderLineSummaryRevision.UpdatedAt</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.UpdatedBy.html">OrderLineSummaryRevision.UpdatedBy</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/OrderLineSummaryRevision.Version.html">OrderLineSummaryRevision.Version</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/PaymentSummary.html">PaymentSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/PaymentTermSummary.html">PaymentTermSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/PeriodSummary.html">PeriodSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/PhoneNumberSummary.html">PhoneNumberSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/PunchoutSiteSummary.html">PunchoutSiteSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/RequisitionHeader.Approvals.html">RequisitionHeader.Approvals</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/RequisitionHeader.Attachments.html">RequisitionHeader.Attachments</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/RequisitionHeader.RequisitionLines.html">RequisitionHeader.RequisitionLines</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/RequisitionLineSummary.html">RequisitionLineSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/RequisitionLineSummary.AssetTags.html">RequisitionLineSummary.AssetTags</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/RequisitionLineSummary.Attachments.html">RequisitionLineSummary.Attachments</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/Resource.html">Resource</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            <a href="../java/com/coupa/api/Identifiable.html">Identifiable</a>
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/Account.html">Account</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/Address.html">Address</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/BudgetLine.html">BudgetLine</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/Commodity.html">Commodity</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/Contract.html">Contract</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/Currency.html">Currency</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/ExchangeRate.html">ExchangeRate</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/ExpenseReport.html">ExpenseReport</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/InventoryTransaction.html">InventoryTransaction</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/InvoiceHeader.html">InvoiceHeader</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/Item.html">Item</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/OrderHeader.html">OrderHeader</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/OrderHeaderRevision.html">OrderHeaderRevision</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/PaymentTerm.html">PaymentTerm</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/PunchoutSite.html">PunchoutSite</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/RequisitionHeader.html">RequisitionHeader</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/ShippingTerm.html">ShippingTerm</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/Supplier.html">Supplier</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/resources/User.html">User</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/Resources.html">Resources</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/RestBoolean.html">RestBoolean</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/RoleSummary.html">RoleSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/ShippingTermSummary.html">ShippingTermSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/SupplierSummary.html">SupplierSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/TaxCodeSummary.html">TaxCodeSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/UomSummary.html">UomSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/User.Roles.html">User.Roles</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/UserSummary.html">UserSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/WarehouseLocationSummary.html">WarehouseLocationSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/WarehouseSummary.html">WarehouseSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/resources/WarehouseTypeSummary.html">WarehouseTypeSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/Accounting.html">Accounting</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/AccountingSegment.html">AccountingSegment</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/Credential.html">Credential</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/CredentialType.html">CredentialType</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/transaction/Sender.html">Sender</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/Description.html">Description</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/Discount.html">Discount</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/DiscountPercent.html">DiscountPercent</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/Distribution.html">Distribution</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/DocumentReference.html">DocumentReference</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/Extrinsic.html">Extrinsic</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/Header.html">Header</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/IdReference.html">IdReference</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/InvoiceDetailHeaderIndicator.html">InvoiceDetailHeaderIndicator</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/InvoiceDetailItem.html">InvoiceDetailItem</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/InvoiceDetailItemReference.html">InvoiceDetailItemReference</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/InvoiceDetailLineIndicator.html">InvoiceDetailLineIndicator</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/InvoiceDetailOrder.html">InvoiceDetailOrder</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/InvoiceDetailOrderInfo.html">InvoiceDetailOrderInfo</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/InvoiceDetailRequest.html">InvoiceDetailRequest</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/InvoiceDetailRequestHeader.html">InvoiceDetailRequestHeader</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/InvoiceDetailServiceItem.html">InvoiceDetailServiceItem</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/InvoiceDetailServiceItemReference.html">InvoiceDetailServiceItemReference</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/InvoiceDetailSummary.html">InvoiceDetailSummary</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/MasterAgreementIDInfo.html">MasterAgreementIDInfo</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/Money.html">Money</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/MoneyType.html">MoneyType</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/transaction/Tax.html">Tax</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/Name.html">Name</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/ObjectFactory.html">ObjectFactory</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/OrderReference.html">OrderReference</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/PaymentTerm.html">PaymentTerm</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/Request.html">Request</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/TaxDetail.html">TaxDetail</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/TaxLocation.html">TaxLocation</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/com/coupa/transaction/Transaction.html">Transaction</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/com/coupa/transaction/CXML.html">CXML</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/coupa/CoupaModule.html">CoupaModule</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="2">
+    
+        <a href="../java/org/mule/modules/coupa/config/CoupaModuleCapabilitiesAdapter.html">CoupaModuleCapabilitiesAdapter</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            Capabilities
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="1">
+    
+        <a href="../java/org/mule/modules/coupa/config/CoupaModuleLifecycleAdapter.html">CoupaModuleLifecycleAdapter</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            Disposable
+         &nbsp;&nbsp;
+    
+        
+            Initialisable
+         &nbsp;&nbsp;
+    
+        
+            Startable
+         &nbsp;&nbsp;
+    
+        
+            Stoppable
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/coupa/config/FindByExampleMessageProcessor.html">FindByExampleMessageProcessor</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            FlowConstructAware
+         &nbsp;&nbsp;
+    
+        
+            MuleContextAware
+         &nbsp;&nbsp;
+    
+        
+            Disposable
+         &nbsp;&nbsp;
+    
+        
+            Initialisable
+         &nbsp;&nbsp;
+    
+        
+            Startable
+         &nbsp;&nbsp;
+    
+        
+            Stoppable
+         &nbsp;&nbsp;
+    
+        
+            MessageProcessor
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/coupa/config/FindMessageProcessor.html">FindMessageProcessor</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            FlowConstructAware
+         &nbsp;&nbsp;
+    
+        
+            MuleContextAware
+         &nbsp;&nbsp;
+    
+        
+            Disposable
+         &nbsp;&nbsp;
+    
+        
+            Initialisable
+         &nbsp;&nbsp;
+    
+        
+            Startable
+         &nbsp;&nbsp;
+    
+        
+            Stoppable
+         &nbsp;&nbsp;
+    
+        
+            MessageProcessor
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/coupa/config/SaveMessageProcessor.html">SaveMessageProcessor</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            FlowConstructAware
+         &nbsp;&nbsp;
+    
+        
+            MuleContextAware
+         &nbsp;&nbsp;
+    
+        
+            Disposable
+         &nbsp;&nbsp;
+    
+        
+            Initialisable
+         &nbsp;&nbsp;
+    
+        
+            Startable
+         &nbsp;&nbsp;
+    
+        
+            Stoppable
+         &nbsp;&nbsp;
+    
+        
+            MessageProcessor
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/coupa/config/spring/CoupaModuleConfigDefinitionParser.html">CoupaModuleConfigDefinitionParser</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            BeanDefinitionParser
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/coupa/config/spring/FindByExampleDefinitionParser.html">FindByExampleDefinitionParser</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            BeanDefinitionParser
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/coupa/config/spring/FindDefinitionParser.html">FindDefinitionParser</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            BeanDefinitionParser
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/coupa/config/spring/SaveDefinitionParser.html">SaveDefinitionParser</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            BeanDefinitionParser
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+
+
+
+</table>
+
+</div>
+
+<div id="footer">
+Generated by <a href="http://www.mulesoft.com/devkit">Mule DevKit</a>. Document generation technology based on <a href="http://code.google.com/p/doclava/">Google's Doclava</a>.
+</div> <!-- end footer -->
+
+</div><!-- end jd-content -->
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize mule-developer-docs.js */
+</script>
+
+</body>
+</html>
+
