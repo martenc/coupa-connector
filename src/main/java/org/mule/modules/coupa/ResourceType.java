@@ -47,10 +47,7 @@ public enum ResourceType
     ExchangeRate(ExchangeRate.class), //
     ExpenseReport(ExpenseReport.class), //
     InventoryTransaction(InventoryTransaction.class), //
-    InvoiceHeader(InvoiceHeader.class), //
     Item(Item.class), //
-    OrderHeader(OrderHeader.class), //
-    OrderHeaderRevision(OrderHeaderRevision.class), //
     PaymentTerm(PaymentTerm.class), //
     PunchoutSite(PunchoutSite.class), //
     ShippingTerm(ShippingTerm.class), //

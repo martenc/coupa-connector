@@ -34,6 +34,7 @@ import org.junit.Test;
 
 import com.coupa.api.Client;
 import com.coupa.resources.Account;
+import com.coupa.resources.Currency;
 import com.coupa.resources.InvoiceHeader;
 import com.coupa.resources.Resource;
 import com.coupa.resources.Resources;
@@ -79,11 +80,11 @@ public class CoupaModuleUnitTest
     public void testFind() throws Exception
     {
         Resources resources = new Resources();
-        resources.getResources().add(new InvoiceHeader());
+        resources.getResources().add(new Currency());
 
         when(coupaClientMock.get(anyString(), any(MultivaluedMap.class), eq(Resources.class))).thenReturn(resources);
 
-        Iterable<Resource> results = coupaModule.find(ResourceType.InvoiceHeader,
+        Iterable<Resource> results = coupaModule.find(ResourceType.Currency,
             new HashMap<String, String>(), false, 0, null);
 
         assertNotNull(results);
