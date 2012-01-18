@@ -12,7 +12,6 @@
  * http://www.opensource.org/licenses/mit-license.php.
  */
 
-
 package com.coupa.api.impl;
 
 import java.io.ByteArrayOutputStream;
@@ -29,6 +28,7 @@ import java.util.Map;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.xml.bind.JAXB;
 
+import org.apache.commons.lang.StringUtils;
 import org.jvnet.inflector.Noun;
 
 import com.coupa.api.Client;
@@ -257,7 +257,11 @@ public class DefaultRepository<T extends Identifiable> implements Repository<T>
 
     private static String makeResourceUrl(Class<?> resourceClass)
     {
-        String className = resourceClass.getName().toLowerCase();
-        return "/" + Noun.pluralOf(className.substring(className.lastIndexOf('.') + 1));
+        return "/" + Noun.pluralOf(camelCaseToRubyCase(resourceClass.getSimpleName()).toLowerCase());
+    }
+
+    protected static String camelCaseToRubyCase(String simpleName)
+    {
+        return StringUtils.join(StringUtils.splitByCharacterTypeCamelCase(simpleName), '_');
     }
 }

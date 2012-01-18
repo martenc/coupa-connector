@@ -27,20 +27,20 @@ import net.sf.staccatocommons.collections.stream.Streams;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.coupa.api.RESTException;
-import com.coupa.api.Repository;
 import com.coupa.api.impl.DefaultRepository;
 import com.coupa.api.impl.JerseyClient;
+import com.coupa.resources.PaymentTerm;
 import com.coupa.resources.User;
 
 public class CoupaTestDriver
 {
     private Repository<User> userRepo;
+    private JerseyClient client;
 
     @Before
     public void setup()
     {
-        JerseyClient client = new JerseyClient(System.getenv("coupaHost"), System.getenv("coupaKey"));
+        client = new JerseyClient(System.getenv("coupaHost"), System.getenv("coupaKey"));
         userRepo = DefaultRepository.newRepository(client, User.class);
     }
 
@@ -85,6 +85,15 @@ public class CoupaTestDriver
         List<User> users = userRepo.findAll(0, 10);
         assertNotNull(users);
         assertEquals(10, users.size());
+    }
+
+    @Test
+    public void testInvoiceHeaderWithLimit() throws Exception
+    {
+        Repository<PaymentTerm> invoiceRepo = DefaultRepository.newRepository(client, PaymentTerm.class);
+        List<PaymentTerm> terms = invoiceRepo.findAll(0, 10);
+        assertNotNull(terms);
+        assertTrue(terms.size() <= 10);
     }
 
 }
