@@ -25,12 +25,12 @@ import org.mule.tck.FunctionalTestCase;
  *
  * @author flbulgarelli
  */
-public class CoupaSchemaIntegrationTest extends FunctionalTestCase
+public class CoupaSchemaTestDriver extends FunctionalTestCase
 {
     @Override
     protected String getConfigResources()
     {
-        return "schema-integration-test.xml";
+        return "schema-test-driver.xml";
     }
 
     @Test
