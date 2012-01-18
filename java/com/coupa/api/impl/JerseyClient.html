@@ -638,7 +638,7 @@ Summary:
             T</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../com/coupa/api/impl/JerseyClient.html#parseResponse(com.sun.jersey.api.client.ClientResponse, java.lang.Class<T>)">parseResponse</a></span>(ClientResponse response, Class&lt;T&gt; responseType)</nobr>
+        <span class="sympad"><a href="../../../../../com/coupa/api/impl/JerseyClient.html#parseResponse(java.lang.String, com.sun.jersey.api.client.ClientResponse, java.lang.Class<T>)">parseResponse</a></span>(String uri, ClientResponse response, Class&lt;T&gt; responseType)</nobr>
         
   </td></tr>
 
@@ -1502,7 +1502,7 @@ From interface
 </div>
 
 
-<A NAME="parseResponse(com.sun.jersey.api.client.ClientResponse, java.lang.Class<T>)"></A>
+<A NAME="parseResponse(java.lang.String, com.sun.jersey.api.client.ClientResponse, java.lang.Class<T>)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1515,7 +1515,7 @@ From interface
         T
       </span>
       <span class="sympad">parseResponse</span>
-      <span class="normal">(ClientResponse response, Class&lt;T&gt; responseType)</span>
+      <span class="normal">(String uri, ClientResponse response, Class&lt;T&gt; responseType)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1531,6 +1531,10 @@ From interface
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
+        <tr>
+          <th>uri</td>
+          <td></td>
+        </tr>
         <tr>
           <th>response</td>
           <td></td>

@@ -594,11 +594,13 @@ specify which configuration to use.</p>
  fields unchanged.
 
  <div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;coupa:save type="Account"&gt;
-	&lt;coupa:resource&gt;
-		&lt;code&gt;ASXS44&lt;/code&gt;
-		&lt;name&gt;MyAccount&lt;/name&gt;
-		...etc..
-	&lt;/coupa:resource&gt;
+	&lt;coupa:resource ref="#[groovy: 
+		['name':'abc',
+		 'segment1':'abc123',
+		 'code':'abc123', 
+		 'accountType':
+		 	['name':'Ace Corporate']
+	 	]]"/&gt;
 &lt;/coupa:save&gt;</pre></div></p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Attributes</h5>
