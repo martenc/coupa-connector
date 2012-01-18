@@ -12,8 +12,13 @@
  * http://www.opensource.org/licenses/mit-license.php.
  */
 
-
 package com.coupa.api;
+
+import java.net.URI;
+
+import net.sf.staccatocommons.collections.stream.Streams;
+
+import com.sun.jersey.api.client.ClientResponse.Status;
 
 /**
  * Code based on <a href="http://code.google.com/p/coupa4j/">Coupa4j</a>
@@ -23,10 +28,35 @@ package com.coupa.api;
 @SuppressWarnings("serial")
 public class RESTException extends RuntimeException
 {
+    private final String uri;
+    private final Status status;
 
-    public RESTException(String message)
+    public RESTException(String uri, Status status, String message)
     {
         super(message);
+        this.uri = uri;
+        this.status = status;
     }
 
+    @Override
+    public String getMessage()
+    {
+        return Streams.cons("URI: " + uri, "Status: " + status, "Message: " + super.getMessage())
+            .joinStrings(",\n");
+    }
+
+    public String getSimpleMessage()
+    {
+        return super.getMessage();
+    }
+
+    public Status getStatus()
+    {
+        return status;
+    }
+
+    public String getUri()
+    {
+        return uri;
+    }
 }

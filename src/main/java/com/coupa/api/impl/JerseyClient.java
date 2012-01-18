@@ -77,7 +77,7 @@ public class JerseyClient implements Client
 
     protected <T> T uploadAndFetch(String url, Object content, String method, Class<T> clazz)
     {
-        return parseResponse(newRequestBuilder(url).method(method, ClientResponse.class, content), clazz);
+        return parseResponse(url, newRequestBuilder(url).method(method, ClientResponse.class, content), clazz);
     }
 
     protected <T> T fetch(String url,
@@ -85,16 +85,17 @@ public class JerseyClient implements Client
                           String method,
                           Class<T> responseClazz)
     {
-        return parseResponse(newRequestBuilder(url, params).method(method, ClientResponse.class),
+        return parseResponse(url, newRequestBuilder(url, params).method(method, ClientResponse.class),
             responseClazz);
     }
 
     @SuppressWarnings("unchecked")
-    protected <T> T parseResponse(ClientResponse response, Class<T> responseType)
+    protected <T> T parseResponse(String uri, ClientResponse response, Class<T> responseType)
     {
         if (response.getClientResponseStatus().getFamily() != Status.Family.SUCCESSFUL)
         {
-            throw new RESTException(extractErrorMessage(response));
+            throw new RESTException(uri, response.getClientResponseStatus(),
+                extractErrorMessage(response));
         }
         T entity = response.getEntity(responseType);
         if (entity instanceof JAXBElement)

@@ -33,6 +33,7 @@ import com.coupa.resources.Currency;
 import com.coupa.resources.Resource;
 import com.coupa.resources.Resources;
 import com.coupa.resources.User;
+import com.sun.jersey.api.client.ClientResponse.Status;
 import com.sun.jersey.api.representation.Form;
 
 public class DefaultRepositoryUnitTest
@@ -132,7 +133,7 @@ public class DefaultRepositoryUnitTest
         when(mockCoupa.get("/currencies/1", Currency.class)).thenReturn(newCurrency());
 
         when(mockCoupa.put(eq("/currencies/1"), any(), eq(Currency.class))).thenThrow(
-            new RESTException("Code cannot be blank"));
+            new RESTException("/currencies", Status.BAD_REQUEST, "Code cannot be blank"));
 
         Currency currency = currencies.findById(1);
         currency.setCode("");
