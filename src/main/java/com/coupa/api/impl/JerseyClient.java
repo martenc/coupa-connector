@@ -15,7 +15,9 @@
 
 package com.coupa.api.impl;
 
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
+import javax.ws.rs.core.Response.Status;
 import javax.xml.bind.JAXBElement;
 
 import net.sf.staccatocommons.collections.stream.Streams;
@@ -28,6 +30,7 @@ import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.WebResource.Builder;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.api.representation.Form;
+import com.sun.jersey.core.header.MediaTypes;
 
 /**
  * Coupa {@link Client} based on WS-RS and Jersey
@@ -89,10 +92,9 @@ public class JerseyClient implements Client
     @SuppressWarnings("unchecked")
     protected <T> T parseResponse(ClientResponse response, Class<T> responseType)
     {
-        if (response.getStatus() >= 300)
+        if (response.getClientResponseStatus().getFamily() != Status.Family.SUCCESSFUL)
         {
-            throw new RESTException(Streams.from(response.getEntity(Errors.class).getError())
-                .joinStrings(","));
+            throw new RESTException(extractErrorMessage(response));
         }
         T entity = response.getEntity(responseType);
         if (entity instanceof JAXBElement)
@@ -100,6 +102,15 @@ public class JerseyClient implements Client
             return ((JAXBElement<T>) entity).getValue();
         }
         return entity;
+    }
+
+    private String extractErrorMessage(ClientResponse response)
+    {
+        if (response.getType().isCompatible(MediaType.APPLICATION_XML_TYPE))
+        {
+            return Streams.from(response.getEntity(Errors.class).getError()).joinStrings(",");
+        }
+        return response.getEntity(String.class);
     }
 
     protected Builder newRequestBuilder(String url)
@@ -111,8 +122,8 @@ public class JerseyClient implements Client
     {
         return resource.path(url)
             .queryParams(params)
-            .accept("application/xml")
-            .type("text/xml")
+            .accept(MediaType.APPLICATION_XML, MediaType.TEXT_XML)
+            .type(MediaType.TEXT_XML)
             .header(COUPA_API_KEY_NAME, apiKey);
     }
 }
