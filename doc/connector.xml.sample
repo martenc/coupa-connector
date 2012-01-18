@@ -1,12 +1,16 @@
 <!-- BEGIN_INCLUDE(coupa:save) -->
 <coupa:save type="Account">
-	<coupa:resource>
-		<code>ASXS44</code>
-		<name>MyAccount</name>
-		...etc..
-	</coupa:resource>
+	<coupa:resource ref="#[groovy: 
+		['name':'abc',
+		 'segment1':'abc123',
+		 'code':'abc123', 
+		 'accountType':
+		 	['name':'Ace Corporate']
+	 	]]"/>
 </coupa:save>
 <!-- END_INCLUDE(coupa:save) -->
+
+ 
 
 <!-- BEGIN_INCLUDE(coupa:find) -->
 <coupa:find type="Account" limit="500"/>
