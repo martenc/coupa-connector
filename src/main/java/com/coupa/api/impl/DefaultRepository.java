@@ -249,10 +249,14 @@ public class DefaultRepository<T extends Identifiable> implements Repository<T>
     {
         return this.resourceUrl;
     }
+    public static <T extends Resource> Repository<T> newRepository(Client coupaServer, Class<T> resourceClass, String resourceName)
+    {
+        return new DefaultRepository<T>(coupaServer, resourceClass, resourceName);
+    }
 
     public static <T extends Resource> Repository<T> newRepository(Client coupaServer, Class<T> resourceClass)
     {
-        return new DefaultRepository<T>(coupaServer, resourceClass, makeResourceUrl(resourceClass));
+        return newRepository(coupaServer, resourceClass, makeResourceUrl(resourceClass));
     }
 
     private static String makeResourceUrl(Class<?> resourceClass)

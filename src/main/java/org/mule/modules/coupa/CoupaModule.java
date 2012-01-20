@@ -96,7 +96,7 @@ public class CoupaModule
     @Processor
     public Resource save(ResourceType type, Map<String, Object> resource)
     {
-        return repo(type).save(unmap(type, resource));
+        return type.newRepository(coupaClient).save(unmap(type, resource));
     }
 
     /**
@@ -118,7 +118,7 @@ public class CoupaModule
                                    @Optional @Default("0") int offset,
                                    @Optional Integer limit)
     {
-        return repo(type).findAll(conditions, exactMatch, offset, limit);
+        return type.newRepository(coupaClient).findAll(conditions, exactMatch, offset, limit);
     }
 
     /**
@@ -136,17 +136,12 @@ public class CoupaModule
                                             Map<String, Object> prototype,
                                             @Optional @Default("false") boolean exactMatch)
     {
-        return repo(type).findAll(unmap(type, prototype), exactMatch);
+        return type.newRepository(coupaClient).findAll(unmap(type, prototype), exactMatch);
     }
 
     protected Resource unmap(ResourceType type, Map<String, Object> resource)
     {
         return (Resource) mom.unmap(resource, type.getResourceClass());
-    }
-
-    protected Repository<Resource> repo(ResourceType type)
-    {
-        return DefaultRepository.newRepository(coupaClient, type.getResourceClass());
     }
 
     public void setCoupaClient(Client coupaClient)

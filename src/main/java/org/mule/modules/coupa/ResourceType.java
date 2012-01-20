@@ -14,6 +14,9 @@
 
 package org.mule.modules.coupa;
 
+import com.coupa.api.Client;
+import com.coupa.api.Repository;
+import com.coupa.api.impl.DefaultRepository;
 import com.coupa.resources.Account;
 import com.coupa.resources.Address;
 import com.coupa.resources.BudgetLine;
@@ -52,7 +55,14 @@ public enum ResourceType
     ShippingTerm(ShippingTerm.class), //
     Supplier(Supplier.class), //
     User(User.class), //
-    InvoicePayment(InvoicePayment.class), //
+    InvoicePayment(InvoicePayment.class)
+    {
+        @Override
+        public Repository<Resource> newRepository(Client coupaClient)
+        {
+            return DefaultRepository.newRepository(coupaClient, this.getResourceClass(), "/invoices");
+        }
+    }, //
     SupplierItem(SupplierItem.class);
 
     private Class<? extends Resource> resourceClass;
@@ -66,6 +76,11 @@ public enum ResourceType
     public Class<Resource> getResourceClass()
     {
         return (Class<Resource>) resourceClass;
+    }
+
+    public Repository<Resource> newRepository(Client coupaClient)
+    {
+        return DefaultRepository.newRepository(coupaClient, this.getResourceClass());
     }
 
 }
