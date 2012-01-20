@@ -21,16 +21,15 @@ import com.coupa.resources.Currency;
 import com.coupa.resources.ExchangeRate;
 import com.coupa.resources.ExpenseReport;
 import com.coupa.resources.InventoryTransaction;
-import com.coupa.resources.InvoiceHeader;
 import com.coupa.resources.Item;
-import com.coupa.resources.OrderHeader;
-import com.coupa.resources.OrderHeaderRevision;
 import com.coupa.resources.PaymentTerm;
 import com.coupa.resources.PunchoutSite;
 import com.coupa.resources.Resource;
 import com.coupa.resources.ShippingTerm;
 import com.coupa.resources.Supplier;
 import com.coupa.resources.User;
+import com.coupa.transaction.InvoicePayment;
+import com.coupa.transaction.SupplierItem;
 
 /**
  * Coupa's {@link Resource}s classes enumeration
@@ -52,7 +51,9 @@ public enum ResourceType
     PunchoutSite(PunchoutSite.class), //
     ShippingTerm(ShippingTerm.class), //
     Supplier(Supplier.class), //
-    User(User.class);
+    User(User.class), //
+    InvoicePayment(InvoicePayment.class), //
+    SupplierItem(SupplierItem.class);
 
     private Class<? extends Resource> resourceClass;
 

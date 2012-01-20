@@ -15,7 +15,6 @@
 
 package com.coupa.api;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -26,16 +25,28 @@ import net.sf.staccatocommons.collections.stream.Streams;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.theories.DataPoints;
+import org.junit.experimental.theories.Theories;
+import org.junit.experimental.theories.Theory;
+import org.junit.runner.RunWith;
 
 import com.coupa.api.impl.DefaultRepository;
 import com.coupa.api.impl.JerseyClient;
 import com.coupa.resources.PaymentTerm;
+import com.coupa.resources.Resource;
 import com.coupa.resources.User;
+import com.coupa.transaction.InvoicePayment;
+import com.coupa.transaction.SupplierItem;
 
+@RunWith(Theories.class)
 public class CoupaTestDriver
 {
     private Repository<User> userRepo;
     private JerseyClient client;
+
+    @DataPoints
+    @SuppressWarnings("rawtypes")
+    public static final Class[] CLASSES = {PaymentTerm.class, User.class, SupplierItem.class};
 
     @Before
     public void setup()
@@ -79,21 +90,13 @@ public class CoupaTestDriver
         assertTrue(users.size() > 0);
     }
 
-    @Test
-    public void testFindAllWithLimit() throws Exception
+    @Theory
+    public <T extends Resource> void testFindAllWithLimit(Class<T> resourceClass) throws Exception
     {
-        List<User> users = userRepo.findAll(0, 10);
-        assertNotNull(users);
-        assertEquals(10, users.size());
-    }
+        Repository<T> repo = DefaultRepository.newRepository(client, resourceClass);
+        List<T> results = repo.findAll(0, 10);
 
-    @Test
-    public void testInvoiceHeaderWithLimit() throws Exception
-    {
-        Repository<PaymentTerm> invoiceRepo = DefaultRepository.newRepository(client, PaymentTerm.class);
-        List<PaymentTerm> terms = invoiceRepo.findAll(0, 10);
-        assertNotNull(terms);
-        assertTrue(terms.size() <= 10);
+        assertNotNull(results);
+        assertTrue(results.size() <= 10 );
     }
-
 }
