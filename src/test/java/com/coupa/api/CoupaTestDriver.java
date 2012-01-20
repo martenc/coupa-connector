@@ -15,8 +15,7 @@
 
 package com.coupa.api;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import java.util.List;
 import java.util.Random;
@@ -35,7 +34,6 @@ import com.coupa.api.impl.JerseyClient;
 import com.coupa.resources.PaymentTerm;
 import com.coupa.resources.Resource;
 import com.coupa.resources.User;
-import com.coupa.transaction.InvoicePayment;
 import com.coupa.transaction.SupplierItem;
 
 @RunWith(Theories.class)
