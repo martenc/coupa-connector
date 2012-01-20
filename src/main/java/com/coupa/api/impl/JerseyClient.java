@@ -30,7 +30,6 @@ import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.WebResource.Builder;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.api.representation.Form;
-import com.sun.jersey.core.header.MediaTypes;
 
 /**
  * Coupa {@link Client} based on WS-RS and Jersey

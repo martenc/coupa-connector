@@ -20,8 +20,6 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import com.coupa.api.impl.internal.XMLToHashMapAdapter;
-
 public class XMLToHashMapAdapterTest {
 
     @Test

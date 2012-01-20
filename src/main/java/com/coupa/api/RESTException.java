@@ -14,8 +14,6 @@
 
 package com.coupa.api;
 
-import java.net.URI;
-
 import net.sf.staccatocommons.collections.stream.Streams;
 
 import com.sun.jersey.api.client.ClientResponse.Status;

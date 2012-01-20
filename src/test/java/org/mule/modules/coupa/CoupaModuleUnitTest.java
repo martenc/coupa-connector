@@ -35,7 +35,6 @@ import org.junit.Test;
 import com.coupa.api.Client;
 import com.coupa.resources.Account;
 import com.coupa.resources.Currency;
-import com.coupa.resources.InvoiceHeader;
 import com.coupa.resources.Resource;
 import com.coupa.resources.Resources;
 
