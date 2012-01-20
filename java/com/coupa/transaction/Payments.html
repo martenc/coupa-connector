@@ -72,7 +72,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" />
 <title>
 
-  InvoiceDetailOrderInfo
+  Payments
 
 
 | Mule Coupa Connector
@@ -221,7 +221,7 @@
           <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailItemReference.html">InvoiceDetailItemReference</a></li>
           <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailLineIndicator.html">InvoiceDetailLineIndicator</a></li>
           <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailOrder.html">InvoiceDetailOrder</a></li>
-          <li class="selected api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailOrderInfo.html">InvoiceDetailOrderInfo</a></li>
+          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailOrderInfo.html">InvoiceDetailOrderInfo</a></li>
           <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailRequest.html">InvoiceDetailRequest</a></li>
           <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailRequestHeader.html">InvoiceDetailRequestHeader</a></li>
           <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/InvoiceDetailServiceItem.html">InvoiceDetailServiceItem</a></li>
@@ -235,7 +235,7 @@
           <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/ObjectFactory.html">ObjectFactory</a></li>
           <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/OrderReference.html">OrderReference</a></li>
           <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Payment.html">Payment</a></li>
-          <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Payments.html">Payments</a></li>
+          <li class="selected api apilevel-"><a href="../../../../java/com/coupa/transaction/Payments.html">Payments</a></li>
           <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/PaymentTerm.html">PaymentTerm</a></li>
           <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Request.html">Request</a></li>
           <li class="api apilevel-"><a href="../../../../java/com/coupa/transaction/Sender.html">Sender</a></li>
@@ -345,7 +345,7 @@ Summary:
      
     
     class
-<h1>InvoiceDetailOrderInfo</h1>
+<h1>Payments</h1>
 
 
 
@@ -378,7 +378,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
         
-        <td colspan="1" class="jd-inheritance-class-cell">com.coupa.transaction.InvoiceDetailOrderInfo</td>
+        <td colspan="1" class="jd-inheritance-class-cell">com.coupa.transaction.Payments</td>
     </tr>
     
 
@@ -394,17 +394,16 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p><p>Java class for anonymous complex type.
+<p><p>Java class for payments complex type.
  
  <p>The following schema fragment specifies the expected content contained within this class.
  
  <pre>
- &lt;complexType>
+ &lt;complexType name="payments">
    &lt;complexContent>
      &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
        &lt;sequence>
-         &lt;element ref="{}OrderReference" minOccurs="0"/>
-         &lt;element ref="{}MasterAgreementIDInfo" minOccurs="0"/>
+         &lt;element name="payment" type="{}payment" maxOccurs="unbounded" minOccurs="0"/>
        &lt;/sequence>
      &lt;/restriction>
    &lt;/complexContent>
@@ -467,19 +466,8 @@ Summary:
           protected
           
           
-          <a href="../../../../java/com/coupa/transaction/MasterAgreementIDInfo.html">MasterAgreementIDInfo</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/InvoiceDetailOrderInfo.html#masterAgreementIDInfo">masterAgreementIDInfo</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class=" api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          <a href="../../../../java/com/coupa/transaction/OrderReference.html">OrderReference</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/InvoiceDetailOrderInfo.html#orderReference">orderReference</a></td>
+          List&lt;<a href="../../../../java/com/coupa/transaction/Payment.html">Payment</a>&gt;</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../com/coupa/transaction/Payments.html#payment">payment</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -509,7 +497,7 @@ Summary:
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../com/coupa/transaction/InvoiceDetailOrderInfo.html#InvoiceDetailOrderInfo()">InvoiceDetailOrderInfo</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/Payments.html#Payments()">Payments</a></span>()</nobr>
         
   </td></tr>
 
@@ -535,66 +523,12 @@ Summary:
             
             
             
-            <a href="../../../../java/com/coupa/transaction/MasterAgreementIDInfo.html">MasterAgreementIDInfo</a></nobr>
+            List&lt;<a href="../../../../java/com/coupa/transaction/Payment.html">Payment</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../com/coupa/transaction/InvoiceDetailOrderInfo.html#getMasterAgreementIDInfo()">getMasterAgreementIDInfo</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../com/coupa/transaction/Payments.html#getPayment()">getPayment</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Gets the value of the masterAgreementIDInfo property.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            <a href="../../../../java/com/coupa/transaction/OrderReference.html">OrderReference</a></nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../com/coupa/transaction/InvoiceDetailOrderInfo.html#getOrderReference()">getOrderReference</a></span>()</nobr>
-        
-        <div class="jd-descrdiv">Gets the value of the orderReference property.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../com/coupa/transaction/InvoiceDetailOrderInfo.html#setMasterAgreementIDInfo(com.coupa.transaction.MasterAgreementIDInfo)">setMasterAgreementIDInfo</a></span>(<a href="../../../../java/com/coupa/transaction/MasterAgreementIDInfo.html">MasterAgreementIDInfo</a> value)</nobr>
-        
-        <div class="jd-descrdiv">Sets the value of the masterAgreementIDInfo property.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../com/coupa/transaction/InvoiceDetailOrderInfo.html#setOrderReference(com.coupa.transaction.OrderReference)">setOrderReference</a></span>(<a href="../../../../java/com/coupa/transaction/OrderReference.html">OrderReference</a> value)</nobr>
-        
-        <div class="jd-descrdiv">Sets the value of the orderReference property.</div>
+        <div class="jd-descrdiv">Gets the value of the payment property.</div>
   
   </td></tr>
 
@@ -847,7 +781,7 @@ From class
 
 
 
-<A NAME="masterAgreementIDInfo"></A>
+<A NAME="payment"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -855,39 +789,9 @@ From class
         protected 
          
          
-        <a href="../../../../java/com/coupa/transaction/MasterAgreementIDInfo.html">MasterAgreementIDInfo</a>
+        List&lt;<a href="../../../../java/com/coupa/transaction/Payment.html">Payment</a>&gt;
       </span>
-        masterAgreementIDInfo
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="orderReference"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        <a href="../../../../java/com/coupa/transaction/OrderReference.html">OrderReference</a>
-      </span>
-        orderReference
+        payment
     </h4>
       <div class="api-level">
         
@@ -916,7 +820,7 @@ From class
 
 
 
-<A NAME="InvoiceDetailOrderInfo()"></A>
+<A NAME="Payments()"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -928,7 +832,7 @@ From class
          
         
       </span>
-      <span class="sympad">InvoiceDetailOrderInfo</span>
+      <span class="sympad">Payments</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">
@@ -962,7 +866,7 @@ From class
 
 
 
-<A NAME="getMasterAgreementIDInfo()"></A>
+<A NAME="getPayment()"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -972,9 +876,9 @@ From class
          
          
          
-        <a href="../../../../java/com/coupa/transaction/MasterAgreementIDInfo.html">MasterAgreementIDInfo</a>
+        List&lt;<a href="../../../../java/com/coupa/transaction/Payment.html">Payment</a>&gt;
       </span>
-      <span class="sympad">getMasterAgreementIDInfo</span>
+      <span class="sympad">getPayment</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">
@@ -987,138 +891,27 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Gets the value of the masterAgreementIDInfo property.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>possible object is
-     <code><a href="../../../../java/com/coupa/transaction/MasterAgreementIDInfo.html">MasterAgreementIDInfo</a></code>
-     
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="getOrderReference()"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        <a href="../../../../java/com/coupa/transaction/OrderReference.html">OrderReference</a>
-      </span>
-      <span class="sympad">getOrderReference</span>
-      <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Gets the value of the orderReference property.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>possible object is
-     <code><a href="../../../../java/com/coupa/transaction/OrderReference.html">OrderReference</a></code>
-     
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="setMasterAgreementIDInfo(com.coupa.transaction.MasterAgreementIDInfo)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">setMasterAgreementIDInfo</span>
-      <span class="normal">(<a href="../../../../java/com/coupa/transaction/MasterAgreementIDInfo.html">MasterAgreementIDInfo</a> value)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Sets the value of the masterAgreementIDInfo property.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>value</td>
-          <td>Allowed object is
-     <code><a href="../../../../java/com/coupa/transaction/MasterAgreementIDInfo.html">MasterAgreementIDInfo</a></code>
-     
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="setOrderReference(com.coupa.transaction.OrderReference)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">setOrderReference</span>
-      <span class="normal">(<a href="../../../../java/com/coupa/transaction/OrderReference.html">OrderReference</a> value)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Sets the value of the orderReference property.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>value</td>
-          <td>Allowed object is
-     <code><a href="../../../../java/com/coupa/transaction/OrderReference.html">OrderReference</a></code>
-     
-</td>
-        </tr>
-      </table>
-  </div>
+  <div class="jd-tagdata jd-tagdescr"><p>Gets the value of the payment property.
+ 
+ <p>
+ This accessor method returns a reference to the live list,
+ not a snapshot. Therefore any modification you make to the
+ returned list will be present inside the JAXB object.
+ This is why there is not a <CODE>set</CODE> method for the payment property.
+ 
+ <p>
+ For example, to add a new item, do as follows:
+ <pre>
+    getPayment().add(newItem);
+ </pre>
+ 
+ 
+ <p>
+ Objects of the following type(s) are allowed in the list
+ <code><a href="../../../../java/com/coupa/transaction/Payment.html">Payment</a></code>
+ 
+ 
+</p></div>
 
     </div>
 </div>
