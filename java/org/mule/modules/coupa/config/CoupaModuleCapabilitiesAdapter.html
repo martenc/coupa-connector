@@ -206,6 +206,7 @@
           <li class="selected api apilevel-"><a href="../../../../../../java/org/mule/modules/coupa/config/CoupaModuleCapabilitiesAdapter.html">CoupaModuleCapabilitiesAdapter</a></li>
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/coupa/config/CoupaModuleLifecycleAdapter.html">CoupaModuleLifecycleAdapter</a></li>
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/coupa/config/FindByExampleMessageProcessor.html">FindByExampleMessageProcessor</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/coupa/config/FindByIdMessageProcessor.html">FindByIdMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/coupa/config/FindMessageProcessor.html">FindMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/coupa/config/ResourceTypeEnumTransformer.html">ResourceTypeEnumTransformer</a></li>
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/coupa/config/SaveMessageProcessor.html">SaveMessageProcessor</a></li>
@@ -693,12 +694,14 @@ From class
             
             
             
-            void</nobr>
+            <a href="../../../../../../java/com/coupa/resources/Resource.html">Resource</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/modules/coupa/CoupaModule.html#init()">init</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/coupa/CoupaModule.html#findById(org.mule.modules.coupa.ResourceType, long)">findById</a></span>(<a href="../../../../../../java/org/mule/modules/coupa/ResourceType.html">ResourceType</a> type, long id)</nobr>
         
-        <div class="jd-descrdiv">Initializes the Coupa client </div>
+        <div class="jd-descrdiv">Searches for an specific resource given its type and id
+
+ </div>
   
   </td></tr>
 
@@ -711,11 +714,13 @@ From class
             
             
             
-            <a href="../../../../../../java/com/coupa/api/Repository.html">Repository</a>&lt;<a href="../../../../../../java/com/coupa/resources/Resource.html">Resource</a>&gt;</nobr>
+            void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/modules/coupa/CoupaModule.html#repo(org.mule.modules.coupa.ResourceType)">repo</a></span>(<a href="../../../../../../java/org/mule/modules/coupa/ResourceType.html">ResourceType</a> type)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/coupa/CoupaModule.html#init()">init</a></span>()</nobr>
         
+        <div class="jd-descrdiv">Initializes the Coupa client </div>
+  
   </td></tr>
 
 

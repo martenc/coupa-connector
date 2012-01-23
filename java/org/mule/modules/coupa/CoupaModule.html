@@ -616,6 +616,26 @@ Summary:
             
             
             
+            <a href="../../../../../java/com/coupa/resources/Resource.html">Resource</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/modules/coupa/CoupaModule.html#findById(org.mule.modules.coupa.ResourceType, long)">findById</a></span>(<a href="../../../../../java/org/mule/modules/coupa/ResourceType.html">ResourceType</a> type, long id)</nobr>
+        
+        <div class="jd-descrdiv">Searches for an specific resource given its type and id
+
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
@@ -627,7 +647,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -645,7 +665,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -661,7 +681,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -677,7 +697,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -705,22 +725,6 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            <a href="../../../../../java/com/coupa/api/Repository.html">Repository</a>&lt;<a href="../../../../../java/com/coupa/resources/Resource.html">Resource</a>&gt;</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/modules/coupa/CoupaModule.html#repo(org.mule.modules.coupa.ResourceType)">repo</a></span>(<a href="../../../../../java/org/mule/modules/coupa/ResourceType.html">ResourceType</a> type)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1278,6 +1282,66 @@ From class
 </div>
 
 
+<A NAME="findById(org.mule.modules.coupa.ResourceType, long)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../java/com/coupa/resources/Resource.html">Resource</a>
+      </span>
+      <span class="sympad">findById</span>
+      <span class="normal">(<a href="../../../../../java/org/mule/modules/coupa/ResourceType.html">ResourceType</a> type, long id)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Searches for an specific resource given its type and id
+
+ </p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>type</td>
+          <td>The type of resource to search</td>
+        </tr>
+        <tr>
+          <th>id</td>
+          <td>The id of the resources</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>the resource for the given id</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="../../../../../java/com/coupa/api/RESTException.html">RESTException</a></td>
+            <td>if there is not resource for the given id and type
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
 <A NAME="init()"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -1498,46 +1562,6 @@ From class
 
 <h2>Protected Methods</h2>
 
-
-
-<A NAME="repo(org.mule.modules.coupa.ResourceType)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-         
-         
-        <a href="../../../../../java/com/coupa/api/Repository.html">Repository</a>&lt;<a href="../../../../../java/com/coupa/resources/Resource.html">Resource</a>&gt;
-      </span>
-      <span class="sympad">repo</span>
-      <span class="normal">(<a href="../../../../../java/org/mule/modules/coupa/ResourceType.html">ResourceType</a> type)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>type</td>
-          <td></td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
 
 
 <A NAME="unmap(org.mule.modules.coupa.ResourceType, java.util.Map<java.lang.String, java.lang.Object>)"></A>
