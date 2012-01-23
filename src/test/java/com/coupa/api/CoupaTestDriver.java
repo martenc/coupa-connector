@@ -24,10 +24,12 @@ import java.util.Random;
 import net.sf.staccatocommons.collections.stream.Streams;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.experimental.theories.DataPoints;
 import org.junit.experimental.theories.Theories;
 import org.junit.experimental.theories.Theory;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 
 import com.coupa.api.impl.DefaultRepository;
@@ -35,7 +37,6 @@ import com.coupa.api.impl.JerseyClient;
 import com.coupa.resources.PaymentTerm;
 import com.coupa.resources.Resource;
 import com.coupa.resources.User;
-import com.coupa.transaction.InvoicePayment;
 import com.coupa.transaction.SupplierItem;
 
 @RunWith(Theories.class)
@@ -43,6 +44,8 @@ public class CoupaTestDriver
 {
     private Repository<User> userRepo;
     private JerseyClient client;
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
 
     @DataPoints
     @SuppressWarnings("rawtypes")
@@ -59,6 +62,14 @@ public class CoupaTestDriver
     public void testSaveNewUserFails() throws Exception
     {
         userRepo.save(new User());
+    }
+
+    @Test
+    public void findInexistent() throws Exception
+    {
+        thrown.expect(RESTException.class);
+        thrown.expectMessage("No results");
+        userRepo.findById(1);
     }
 
     @Test

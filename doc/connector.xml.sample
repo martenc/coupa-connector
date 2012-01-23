@@ -10,7 +10,10 @@
 </coupa:save>
 <!-- END_INCLUDE(coupa:save) -->
 
- 
+<!-- BEGIN_INCLUDE(coupa:find-by-id) -->
+<coupa:find-by-id type="User" id="50392"/>
+<!-- END_INCLUDE(coupa:find-by-id) -->
+
 
 <!-- BEGIN_INCLUDE(coupa:find) -->
 <coupa:find type="Account" limit="500"/>

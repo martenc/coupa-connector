@@ -39,5 +39,9 @@
   <flow name="Find">
     <coupa:find type="Account" limit="500" />
   </flow>
+  
+  <flow name="FindById">
+    <coupa:find-by-id type="User" id="50392"/>
+  </flow>
 
 </mule>

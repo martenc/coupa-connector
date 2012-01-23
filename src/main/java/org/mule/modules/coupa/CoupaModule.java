@@ -100,6 +100,23 @@ public class CoupaModule
     }
 
     /**
+     * Searches for an specific resource given its type and id
+     *
+     * {@sample.xml ../../../doc/connector.xml.sample coupa:find-by-id}
+     *
+     * @param type the type of resource to search
+     * @param id  the id of the resources
+     * @return the resource for the given id
+     * @throws RESTException if there is not resource for the given id and type
+     */
+    @Processor
+    public Resource findById(ResourceType type, long id)
+    {
+        /*TODO use big integers when devkit supports them*/
+        return type.newRepository(coupaClient).findById(id);
+    }
+
+    /**
      * Searches for resources
      *
      * {@sample.xml ../../../doc/connector.xml.sample coupa:find}
