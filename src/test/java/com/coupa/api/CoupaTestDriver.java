@@ -31,27 +31,25 @@ import org.junit.experimental.theories.Theories;
 import org.junit.experimental.theories.Theory;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
+import org.mule.modules.coupa.ResourceType;
 
 import com.coupa.api.impl.DefaultRepository;
 import com.coupa.api.impl.JerseyClient;
+import com.coupa.resources.InvoiceHeader;
 import com.coupa.resources.OrderHeader;
 import com.coupa.resources.OrderHeaderRevision;
 import com.coupa.resources.PaymentTerm;
+import com.coupa.resources.RequisitionHeader;
 import com.coupa.resources.Resource;
 import com.coupa.resources.User;
 import com.coupa.transaction.SupplierItem;
 
-@RunWith(Theories.class)
 public class CoupaTestDriver
 {
     private Repository<User> userRepo;
     private JerseyClient client;
     @Rule
     public ExpectedException thrown = ExpectedException.none();
-
-    @DataPoints
-    @SuppressWarnings("rawtypes")
-    public static final Class[] CLASSES = {PaymentTerm.class, User.class, SupplierItem.class};
 
     @Before
     public void setup()
@@ -95,13 +93,6 @@ public class CoupaTestDriver
     }
 
     @Test
-    public void findOrdersRevisions() throws Exception
-    {
-        Repository<OrderHeaderRevision> orderRepo = DefaultRepository.newRepository(client, OrderHeaderRevision.class, "/purchase_order_revisions");
-        Streams.from(orderRepo.findAll()).println();
-    }
-
-    @Test
     public void testFindById() throws Exception
     {
         User user = userRepo.findById(2);
@@ -118,14 +109,4 @@ public class CoupaTestDriver
     }
 
 
-
-    @Theory
-    public <T extends Resource> void testFindAllWithLimit(Class<T> resourceClass) throws Exception
-    {
-        Repository<T> repo = DefaultRepository.newRepository(client, resourceClass);
-        List<T> results = repo.findAll(0, 10);
-
-        assertNotNull(results);
-        assertTrue(results.size() <= 10 );
-    }
 }

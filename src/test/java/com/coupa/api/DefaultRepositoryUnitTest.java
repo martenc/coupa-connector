@@ -13,6 +13,7 @@
  */
 
 package com.coupa.api;
+
 import static net.sf.staccatocommons.lang.number.Numbers.i;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
