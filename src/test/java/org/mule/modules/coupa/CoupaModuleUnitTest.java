@@ -14,11 +14,11 @@
 
 
 package org.mule.modules.coupa;
-import static net.sf.staccatocommons.lang.number.Numbers.*;
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.*;
 import static org.mockito.Mockito.*;
 
+import java.math.BigInteger;
 import java.util.HashMap;
 
 import javax.ws.rs.core.MultivaluedMap;
@@ -84,6 +84,11 @@ public class CoupaModuleUnitTest
 
         assertNotNull(results);
         assertEquals(1, Streams.from(results).size());
+    }
+    
+    private BigInteger i(int i)
+    {
+        return BigInteger.valueOf(i);
     }
 
 }

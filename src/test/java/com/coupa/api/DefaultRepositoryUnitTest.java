@@ -13,11 +13,11 @@
  */
 
 package com.coupa.api;
-import static net.sf.staccatocommons.lang.number.Numbers.*;
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.*;
 import static org.mockito.Mockito.*;
 
+import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.List;
 
@@ -167,5 +167,10 @@ public class DefaultRepositoryUnitTest
         List<Currency> foundCurrencies = currencies.findAll(example);
         assertNotNull(foundCurrencies);
         assertEquals("USD", foundCurrencies.get(0).getCode());
+    }
+    
+    private BigInteger i(int i)
+    {
+        return BigInteger.valueOf(i);
     }
 }
