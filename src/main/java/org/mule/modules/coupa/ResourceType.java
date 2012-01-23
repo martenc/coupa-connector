@@ -14,6 +14,8 @@
 
 package org.mule.modules.coupa;
 
+import net.sf.staccatocommons.defs.Applicable2;
+
 import com.coupa.api.Client;
 import com.coupa.api.Repository;
 import com.coupa.api.impl.DefaultRepository;
@@ -25,6 +27,8 @@ import com.coupa.resources.ExchangeRate;
 import com.coupa.resources.ExpenseReport;
 import com.coupa.resources.InventoryTransaction;
 import com.coupa.resources.Item;
+import com.coupa.resources.OrderHeader;
+import com.coupa.resources.OrderHeaderRevision;
 import com.coupa.resources.PaymentTerm;
 import com.coupa.resources.PunchoutSite;
 import com.coupa.resources.Resource;
@@ -55,21 +59,28 @@ public enum ResourceType
     ShippingTerm(ShippingTerm.class), //
     Supplier(Supplier.class), //
     User(User.class), //
-    InvoicePayment(InvoicePayment.class)
-    {
-        @Override
-        public Repository<Resource> newRepository(Client coupaClient)
-        {
-            return DefaultRepository.newRepository(coupaClient, this.getResourceClass(), "/invoices");
-        }
-    }, //
-    SupplierItem(SupplierItem.class);
+    InvoicePayment(InvoicePayment.class, "invoices"), //
+    SupplierItem(SupplierItem.class), //
+    Order(OrderHeader.class, "purchase_orders"),
+    OrderRevision(OrderHeaderRevision.class, "purchase_order_revisions");
 
     private Class<? extends Resource> resourceClass;
+    private ResourceFactory resourceFactory;
+
+    private ResourceType(Class<? extends Resource> clazz, ResourceFactory resourceFactory)
+    {
+        this.resourceClass = clazz;
+        this.resourceFactory = resourceFactory;
+    }
 
     private ResourceType(Class<? extends Resource> clazz)
     {
-        this.resourceClass = clazz;
+        this(clazz, standardNaming());
+    }
+
+    private ResourceType(Class<? extends Resource> clazz, String resourceName)
+    {
+        this(clazz, customNaming(resourceName));
     }
 
     @SuppressWarnings("unchecked")
@@ -80,7 +91,32 @@ public enum ResourceType
 
     public Repository<Resource> newRepository(Client coupaClient)
     {
-        return DefaultRepository.newRepository(coupaClient, this.getResourceClass());
+        return resourceFactory.apply(coupaClient, (Class<Resource>) resourceClass);
     }
 
+    private static ResourceFactory standardNaming()
+    {
+        return new ResourceFactory()
+        {
+            public Repository<Resource> apply(Client client, Class<Resource> clazz)
+            {
+                return DefaultRepository.newRepository(client, clazz);
+            }
+        };
+    }
+
+    private static ResourceFactory customNaming(final String resourceName)
+    {
+        return new ResourceFactory()
+        {
+            public Repository<Resource> apply(Client client, Class<Resource> clazz)
+            {
+                return DefaultRepository.newRepository(client, clazz, "/" + resourceName);
+            }
+        };
+    }
+
+    interface ResourceFactory extends Applicable2<Client, Class<Resource>, Repository<Resource>>
+    {
+    }
 }

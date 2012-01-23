@@ -34,6 +34,8 @@ import org.junit.runner.RunWith;
 
 import com.coupa.api.impl.DefaultRepository;
 import com.coupa.api.impl.JerseyClient;
+import com.coupa.resources.OrderHeader;
+import com.coupa.resources.OrderHeaderRevision;
 import com.coupa.resources.PaymentTerm;
 import com.coupa.resources.Resource;
 import com.coupa.resources.User;
@@ -86,6 +88,20 @@ public class CoupaTestDriver
     }
 
     @Test
+    public void findOrders() throws Exception
+    {
+        Repository<OrderHeader> orderRepo = DefaultRepository.newRepository(client, OrderHeader.class, "/purchase_orders");
+        Streams.from(orderRepo.findAll(0, 10)).println();
+    }
+
+    @Test
+    public void findOrdersRevisions() throws Exception
+    {
+        Repository<OrderHeaderRevision> orderRepo = DefaultRepository.newRepository(client, OrderHeaderRevision.class, "/purchase_order_revisions");
+        Streams.from(orderRepo.findAll()).println();
+    }
+
+    @Test
     public void testFindById() throws Exception
     {
         User user = userRepo.findById(2);
@@ -100,6 +116,8 @@ public class CoupaTestDriver
         assertNotNull(users);
         assertTrue(users.size() > 0);
     }
+
+
 
     @Theory
     public <T extends Resource> void testFindAllWithLimit(Class<T> resourceClass) throws Exception
