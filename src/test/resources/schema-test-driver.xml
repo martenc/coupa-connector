@@ -17,8 +17,8 @@
         http://www.mulesoft.org/schema/mule/coupa http://www.mulesoft.org/schema/mule/coupa/1.0/mule-coupa.xsd">
 
 
-  <coupa:config baseUrl="${coupaUrl}"
-    apiKey="${coupaKey} " />
+  <coupa:config baseUrl="${coupaHost}"
+    apiKey="${coupaKey}" />
 
   <flow name="findOneAccount">
     <coupa:find type="Account" limit="1" />
