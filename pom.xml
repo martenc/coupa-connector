@@ -15,6 +15,7 @@
 
   <properties>
     <mule.module.utils.version>1.0</mule.module.utils.version>
+    <sonar.exclusions>com/coupa/resources/**/*.java</sonar.exclusions>
   </properties>
 
   <dependencies>
