@@ -14,16 +14,10 @@
   <name>Mule Coupa Connector</name>
 
   <properties>
-    <mom.version>1.2.2</mom.version>
-    <mule.module.utils.version>1.0-beta-1</mule.module.utils.version>
+    <mule.module.utils.version>1.0</mule.module.utils.version>
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>com.zaubersoftware</groupId>
-      <artifactId>mom</artifactId>
-      <version>${mom.version}</version>
-    </dependency>
     <dependency>
       <groupId>org.mule.modules</groupId>
       <artifactId>mule-modules-utils</artifactId>

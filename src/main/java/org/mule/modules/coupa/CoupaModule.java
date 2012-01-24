@@ -26,9 +26,7 @@ import org.mule.api.annotations.Module;
 import org.mule.api.annotations.Processor;
 import org.mule.api.annotations.param.Default;
 import org.mule.api.annotations.param.Optional;
-import org.mule.modules.utils.mom.CxfMapObjectMappers;
-
-import ar.com.zauber.commons.mom.MapObjectMapper;
+import org.mule.modules.utils.mom.JaxbMapObjectMappers;
 
 import com.coupa.api.Client;
 import com.coupa.api.RESTException;
@@ -36,6 +34,7 @@ import com.coupa.api.Repository;
 import com.coupa.api.impl.DefaultRepository;
 import com.coupa.api.impl.JerseyClient;
 import com.coupa.resources.Resource;
+import com.zauberlabs.commons.mom.MapObjectMapper;
 
 /**
  * Coupa is a provider of cloud spend management (CSM) solutions that help companies
@@ -55,7 +54,7 @@ public class CoupaModule
 
     private Client coupaClient;
 
-    private MapObjectMapper mom = CxfMapObjectMappers.defaultWithPackage("com.coupa.resources").build();
+    private final MapObjectMapper mom = JaxbMapObjectMappers.defaultWithPackage("com.coupa.resources").build();
 
     /**
      * The base URL of your company's account in Coupa. Its looks like
