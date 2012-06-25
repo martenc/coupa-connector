@@ -64,6 +64,8 @@
 
 
 
+
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -85,6 +87,7 @@
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
 <script src="../assets/search_autocomplete.js" type="text/javascript"></script>
 <script src="../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../assets/jquery-toc.js" type="text/javascript"></script>
 <script src="../assets/mule-developer-docs.js" type="text/javascript"></script>
 <script src="../assets/prettify.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -103,6 +106,27 @@
     #resize-packages-nav{border-bottom:3px solid #666;}
   </style>
 </noscript>
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";
+  feedback_widget_options.company = "mulesoft";
+  feedback_widget_options.placement = "right";
+  feedback_widget_options.color = "#2F74AE";
+  feedback_widget_options.style = "question";
+
+  feedback_widget_options.tag = "Mule Coupa Connector";
+
+  feedback_widget_options.limit = "3";
+
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
 </head>
 
 
@@ -191,9 +215,15 @@
     <li class="api apilevel-">
   <a href="../java/org/mule/modules/coupa/package-summary.html">org.mule.modules.coupa</a></li>
     <li class="api apilevel-">
+  <a href="../java/org/mule/modules/coupa/adapters/package-summary.html">org.mule.modules.coupa.adapters</a></li>
+    <li class="api apilevel-">
   <a href="../java/org/mule/modules/coupa/config/package-summary.html">org.mule.modules.coupa.config</a></li>
     <li class="api apilevel-">
   <a href="../java/org/mule/modules/coupa/config/spring/package-summary.html">org.mule.modules.coupa.config.spring</a></li>
+    <li class="api apilevel-">
+  <a href="../java/org/mule/modules/coupa/processors/package-summary.html">org.mule.modules.coupa.processors</a></li>
+    <li class="api apilevel-">
+  <a href="../java/org/mule/modules/coupa/transformers/package-summary.html">org.mule.modules.coupa.transformers</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -429,8 +459,20 @@
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/adapters/CoupaModuleCapabilitiesAdapter.html">CoupaModuleCapabilitiesAdapter</a></td>
+            <td class="jd-descrcol" width="100%">A <code>CoupaModuleCapabilitiesAdapter</code> is a wrapper around <code><a href="../java/org/mule/modules/coupa/CoupaModule.html">CoupaModule</a></code> that implements org.mule.api.Capabilities interface.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/CoupaModuleCapabilitiesAdapter.html">CoupaModuleCapabilitiesAdapter</a></td>
             <td class="jd-descrcol" width="100%">A <code>CoupaModuleCapabilitiesAdapter</code> is a wrapper around <code><a href="../java/org/mule/modules/coupa/CoupaModule.html">CoupaModule</a></code> that implements org.mule.api.Capabilities interface.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/CoupaModuleConfigDefinitionParser.html">CoupaModuleConfigDefinitionParser</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
@@ -441,8 +483,20 @@
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/adapters/CoupaModuleLifecycleAdapter.html">CoupaModuleLifecycleAdapter</a></td>
+            <td class="jd-descrcol" width="100%">A <code>CoupaModuleLifecycleAdapter</code> is a wrapper around <code><a href="../java/org/mule/modules/coupa/CoupaModule.html">CoupaModule</a></code> that adds lifecycle methods to the pojo.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/CoupaModuleLifecycleAdapter.html">CoupaModuleLifecycleAdapter</a></td>
             <td class="jd-descrcol" width="100%">A <code>CoupaModuleLifecycleAdapter</code> is a wrapper around <code><a href="../java/org/mule/modules/coupa/CoupaModule.html">CoupaModule</a></code> that adds lifecycle methods to the pojo.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/CoupaModuleNamespaceHandler.html">CoupaModuleNamespaceHandler</a></td>
+            <td class="jd-descrcol" width="100%">Registers bean definitions parsers for handling elements in <code>http://www.mulesoft.org/schema/mule/coupa</code>.&nbsp;</td>
         </tr>
     
     
@@ -618,37 +672,73 @@
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/FindByExampleDefinitionParser.html">FindByExampleDefinitionParser</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/spring/FindByExampleDefinitionParser.html">FindByExampleDefinitionParser</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/FindByExampleMessageProcessor.html">FindByExampleMessageProcessor</a></td>
             <td class="jd-descrcol" width="100%">FindByExampleMessageProcessor invokes the <code><a href="../java/org/mule/modules/coupa/CoupaModule.html#findByExample(org.mule.modules.coupa.ResourceType, java.util.Map<java.lang.String, java.lang.Object>, boolean)">findByExample(org.mule.modules.coupa.ResourceType, java.util.Map, boolean)</a></code> method in <code><a href="../java/org/mule/modules/coupa/CoupaModule.html">CoupaModule</a></code>.&nbsp;</td>
         </tr>
     
     
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/processors/FindByExampleMessageProcessor.html">FindByExampleMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">FindByExampleMessageProcessor invokes the <code><a href="../java/org/mule/modules/coupa/CoupaModule.html#findByExample(org.mule.modules.coupa.ResourceType, java.util.Map<java.lang.String, java.lang.Object>, boolean)">findByExample(org.mule.modules.coupa.ResourceType, java.util.Map, boolean)</a></code> method in <code><a href="../java/org/mule/modules/coupa/CoupaModule.html">CoupaModule</a></code>.&nbsp;</td>
+        </tr>
+    
+    
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/FindByIdDefinitionParser.html">FindByIdDefinitionParser</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/spring/FindByIdDefinitionParser.html">FindByIdDefinitionParser</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/FindByIdMessageProcessor.html">FindByIdMessageProcessor</a></td>
             <td class="jd-descrcol" width="100%">FindByIdMessageProcessor invokes the <code><a href="../java/org/mule/modules/coupa/CoupaModule.html#findById(org.mule.modules.coupa.ResourceType, long)">findById(org.mule.modules.coupa.ResourceType, long)</a></code> method in <code><a href="../java/org/mule/modules/coupa/CoupaModule.html">CoupaModule</a></code>.&nbsp;</td>
         </tr>
     
     
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/processors/FindByIdMessageProcessor.html">FindByIdMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">FindByIdMessageProcessor invokes the <code><a href="../java/org/mule/modules/coupa/CoupaModule.html#findById(org.mule.modules.coupa.ResourceType, long)">findById(org.mule.modules.coupa.ResourceType, long)</a></code> method in <code><a href="../java/org/mule/modules/coupa/CoupaModule.html">CoupaModule</a></code>.&nbsp;</td>
+        </tr>
+    
+    
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/spring/FindDefinitionParser.html">FindDefinitionParser</a></td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/FindDefinitionParser.html">FindDefinitionParser</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/spring/FindDefinitionParser.html">FindDefinitionParser</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/FindMessageProcessor.html">FindMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">FindMessageProcessor invokes the <code><a href="../java/org/mule/modules/coupa/CoupaModule.html#find(org.mule.modules.coupa.ResourceType, java.util.Map<java.lang.String, java.lang.String>, boolean, int, java.lang.Integer)">find(org.mule.modules.coupa.ResourceType, java.util.Map, boolean, int, java.lang.Integer)</a></code> method in <code><a href="../java/org/mule/modules/coupa/CoupaModule.html">CoupaModule</a></code>.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/processors/FindMessageProcessor.html">FindMessageProcessor</a></td>
             <td class="jd-descrcol" width="100%">FindMessageProcessor invokes the <code><a href="../java/org/mule/modules/coupa/CoupaModule.html#find(org.mule.modules.coupa.ResourceType, java.util.Map<java.lang.String, java.lang.String>, boolean, int, java.lang.Integer)">find(org.mule.modules.coupa.ResourceType, java.util.Map, boolean, int, java.lang.Integer)</a></code> method in <code><a href="../java/org/mule/modules/coupa/CoupaModule.html">CoupaModule</a></code>.&nbsp;</td>
         </tr>
     
@@ -1416,18 +1506,24 @@
     
     
         <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/transformers/ResourceTypeEnumTransformer.html">ResourceTypeEnumTransformer</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/com/coupa/resources/RestBoolean.html">RestBoolean</a></td>
             <td class="jd-descrcol" width="100%"><p>Java class for restBoolean complex type.&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/com/coupa/api/RESTException.html">RESTException</a></td>
             <td class="jd-descrcol" width="100%">Code based on <a href="http://code.google.com/p/coupa4j/">Coupa4j</a>&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/com/coupa/resources/RoleSummary.html">RoleSummary</a></td>
             <td class="jd-descrcol" width="100%"><p>Java class for role-summary complex type.&nbsp;</td>
         </tr>
@@ -1441,13 +1537,25 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/spring/SaveDefinitionParser.html">SaveDefinitionParser</a></td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/SaveDefinitionParser.html">SaveDefinitionParser</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/spring/SaveDefinitionParser.html">SaveDefinitionParser</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/config/SaveMessageProcessor.html">SaveMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">SaveMessageProcessor invokes the <code><a href="../java/org/mule/modules/coupa/CoupaModule.html#save(org.mule.modules.coupa.ResourceType, java.util.Map<java.lang.String, java.lang.Object>)">save(org.mule.modules.coupa.ResourceType, java.util.Map)</a></code> method in <code><a href="../java/org/mule/modules/coupa/CoupaModule.html">CoupaModule</a></code>.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/coupa/processors/SaveMessageProcessor.html">SaveMessageProcessor</a></td>
             <td class="jd-descrcol" width="100%">SaveMessageProcessor invokes the <code><a href="../java/org/mule/modules/coupa/CoupaModule.html#save(org.mule.modules.coupa.ResourceType, java.util.Map<java.lang.String, java.lang.Object>)">save(org.mule.modules.coupa.ResourceType, java.util.Map)</a></code> method in <code><a href="../java/org/mule/modules/coupa/CoupaModule.html">CoupaModule</a></code>.&nbsp;</td>
         </tr>
     

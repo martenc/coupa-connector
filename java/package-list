@@ -4,6 +4,9 @@ com.coupa.api.impl.internal
 com.coupa.resources
 com.coupa.transaction
 org.mule.modules.coupa
+org.mule.modules.coupa.adapters
 org.mule.modules.coupa.config
 org.mule.modules.coupa.config.spring
+org.mule.modules.coupa.processors
+org.mule.modules.coupa.transformers
 
