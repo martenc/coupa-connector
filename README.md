@@ -1,7 +1,7 @@
 Mule Coupa Connector
 =========================
 
-TODO
+Coupa is a provider of cloud spend management (CSM) solutions that help companies control their indirect spending and generate savings that go direct to the bottom line. This Mule Module is cable of creating, updating and finding coupa resources both master resources and transaction resources
 
 Installation and Usage
 ----------------------
