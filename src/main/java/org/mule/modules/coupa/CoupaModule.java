@@ -22,18 +22,16 @@ import java.util.Map;
 import javax.annotation.PostConstruct;
 
 import org.mule.api.annotations.Configurable;
-import org.mule.api.annotations.Module;
+import org.mule.api.annotations.Connector;
 import org.mule.api.annotations.Processor;
 import org.mule.api.annotations.param.Default;
 import org.mule.api.annotations.param.Optional;
 import org.mule.modules.utils.mom.JaxbMapObjectMappers;
+import com.coupa.resources.Resource;
 
 import com.coupa.api.Client;
 import com.coupa.api.RESTException;
-import com.coupa.api.Repository;
-import com.coupa.api.impl.DefaultRepository;
 import com.coupa.api.impl.JerseyClient;
-import com.coupa.resources.Resource;
 import com.zauberlabs.commons.mom.MapObjectMapper;
 
 /**
@@ -48,7 +46,7 @@ import com.zauberlabs.commons.mom.MapObjectMapper;
  *
  * @author MuleSoft, Inc
  */
-@Module(name = "coupa", schemaVersion = "1.0")
+@Connector(name = "coupa", schemaVersion = "1.0")
 public class CoupaModule
 {
 
@@ -174,4 +172,12 @@ public class CoupaModule
     {
         this.baseUrl = baseUrl;
     }
+
+	public String getBaseUrl() {
+		return baseUrl;
+	}
+
+	public String getApiKey() {
+		return apiKey;
+	}
 }
